@@ -196,10 +196,13 @@
       position: relative;
     }
     .pipeline-stage:hover, .pipeline-stage.active {
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(255,255,255,0.12);
+      background: #f0f0f5;
+      border-color: #e0e0ea;
+      color: #1a1a2e;
     }
-    .pipeline-stage.active { border-color: var(--accent-indigo); box-shadow: 0 0 20px rgba(99,102,241,0.25); }
+    .pipeline-stage:hover .stage-name, .pipeline-stage.active .stage-name { color: #1a1a2e; }
+    .pipeline-stage:hover .stage-sub, .pipeline-stage.active .stage-sub { color: #6a6a8a; }
+    .pipeline-stage.active { border-color: var(--accent-indigo); box-shadow: 0 4px 20px rgba(99,102,241,0.2); }
     .pipeline-stage .stage-num {
       font-size: 11px; font-weight: 700; text-transform: uppercase;
       letter-spacing: 0.1em; margin-bottom: 4px;
@@ -222,32 +225,32 @@
       gap: 16px;
     }
     .card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: #f0f0f5;
+      border: 1px solid #e0e0ea;
       border-radius: 16px;
       padding: 24px;
       padding-left: 28px;
-      border-left: 3px solid var(--accent-indigo);
+      border-left: 4px solid var(--accent-indigo);
       transition: all 0.3s;
       text-decoration: none;
-      color: inherit;
+      color: #1a1a2e;
       display: block;
       position: relative;
       overflow: hidden;
-      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
     .card::before {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(99,102,241,0.3), transparent);
     }
     .card:hover {
       border-color: #6366f1;
-      background: rgba(255,255,255,0.12);
+      background: #ffffff;
       transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(99,102,241,0.2), 0 0 0 1px rgba(99,102,241,0.15);
+      box-shadow: 0 16px 48px rgba(99,102,241,0.25), 0 0 0 1px rgba(99,102,241,0.2);
     }
     /* Color-coded left borders per stage */
     .card-discover { border-left-color: var(--accent-violet); }
@@ -265,8 +268,8 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 18px; margin-bottom: 16px;
     }
-    .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: #ffffff; }
-    .card p { font-size: 13px; color: #c0c0d8; line-height: 1.6; }
+    .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: #1a1a2e; }
+    .card p { font-size: 13px; color: #4a4a6a; line-height: 1.6; }
     .card-tag {
       display: inline-block; margin-top: 12px;
       font-size: 11px; font-weight: 600; text-transform: uppercase;
@@ -274,27 +277,27 @@
       border-radius: 6px;
     }
 
-    .tag-discover { background: rgba(139,92,246,0.1); color: var(--accent-violet); }
-    .tag-architect { background: rgba(99,102,241,0.1); color: var(--accent-indigo); }
-    .tag-construct { background: rgba(6,182,212,0.1); color: var(--accent-cyan); }
-    .tag-harden { background: rgba(244,63,94,0.1); color: var(--accent-rose); }
-    .tag-validate { background: rgba(16,185,129,0.1); color: var(--accent-emerald); }
-    .tag-release { background: rgba(245,158,11,0.1); color: var(--accent-amber); }
-    .tag-operate { background: rgba(249,115,22,0.1); color: var(--accent-orange); }
-    .tag-skill { background: rgba(99,102,241,0.1); color: var(--accent-indigo); }
-    .tag-guardian { background: rgba(244,63,94,0.1); color: var(--accent-rose); }
-    .tag-runbook { background: rgba(16,185,129,0.1); color: var(--accent-emerald); }
+    .tag-discover { background: #ede9fe; color: #7c3aed; }
+    .tag-architect { background: #e0e7ff; color: #4f46e5; }
+    .tag-construct { background: #cffafe; color: #0891b2; }
+    .tag-harden { background: #ffe4e6; color: #e11d48; }
+    .tag-validate { background: #d1fae5; color: #059669; }
+    .tag-release { background: #fef3c7; color: #d97706; }
+    .tag-operate { background: #ffedd5; color: #ea580c; }
+    .tag-skill { background: #e0e7ff; color: #4f46e5; }
+    .tag-guardian { background: #ffe4e6; color: #e11d48; }
+    .tag-runbook { background: #d1fae5; color: #059669; }
 
-    .icon-discover { background: rgba(139,92,246,0.2); color: var(--accent-violet); box-shadow: 0 0 12px rgba(139,92,246,0.15); }
-    .icon-architect { background: rgba(99,102,241,0.2); color: var(--accent-indigo); box-shadow: 0 0 12px rgba(99,102,241,0.15); }
-    .icon-construct { background: rgba(6,182,212,0.2); color: var(--accent-cyan); box-shadow: 0 0 12px rgba(6,182,212,0.15); }
-    .icon-harden { background: rgba(244,63,94,0.2); color: var(--accent-rose); box-shadow: 0 0 12px rgba(244,63,94,0.15); }
-    .icon-validate { background: rgba(16,185,129,0.2); color: var(--accent-emerald); box-shadow: 0 0 12px rgba(16,185,129,0.15); }
-    .icon-release { background: rgba(245,158,11,0.2); color: var(--accent-amber); box-shadow: 0 0 12px rgba(245,158,11,0.15); }
-    .icon-operate { background: rgba(249,115,22,0.2); color: var(--accent-orange); box-shadow: 0 0 12px rgba(249,115,22,0.15); }
-    .icon-skill { background: rgba(99,102,241,0.2); color: var(--accent-indigo); box-shadow: 0 0 12px rgba(99,102,241,0.15); }
-    .icon-guardian { background: rgba(244,63,94,0.2); color: var(--accent-rose); box-shadow: 0 0 12px rgba(244,63,94,0.15); }
-    .icon-runbook { background: rgba(16,185,129,0.2); color: var(--accent-emerald); box-shadow: 0 0 12px rgba(16,185,129,0.15); }
+    .icon-discover { background: #ede9fe; color: #7c3aed; }
+    .icon-architect { background: #e0e7ff; color: #4f46e5; }
+    .icon-construct { background: #cffafe; color: #0891b2; }
+    .icon-harden { background: #ffe4e6; color: #e11d48; }
+    .icon-validate { background: #d1fae5; color: #059669; }
+    .icon-release { background: #fef3c7; color: #d97706; }
+    .icon-operate { background: #ffedd5; color: #ea580c; }
+    .icon-skill { background: #e0e7ff; color: #4f46e5; }
+    .icon-guardian { background: #ffe4e6; color: #e11d48; }
+    .icon-runbook { background: #d1fae5; color: #059669; }
 
     /* Skills section */
     .skills-section, .guardians-section, .runbooks-section { padding: 80px 0; }
@@ -312,19 +315,19 @@
     .arch-item {
       padding: 24px;
       border-radius: 16px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: #f0f0f5;
+      border: 1px solid #e0e0ea;
       transition: all 0.3s;
-      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
     .arch-item:hover {
       border-color: #6366f1;
-      background: rgba(255,255,255,0.12);
+      background: #ffffff;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(99,102,241,0.15);
+      box-shadow: 0 8px 24px rgba(99,102,241,0.2);
     }
-    .arch-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-    .arch-item p { font-size: 13px; color: var(--text-secondary); }
+    .arch-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: #1a1a2e; }
+    .arch-item p { font-size: 13px; color: #4a4a6a; }
     .arch-num {
       font-size: 32px; font-weight: 900;
       background: var(--gradient-primary);
@@ -339,8 +342,8 @@
       text-align: center;
     }
     .cta-box {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: #f0f0f5;
+      border: 1px solid #e0e0ea;
       border-radius: 24px;
       padding: 64px 48px;
       position: relative;
@@ -355,11 +358,11 @@
       z-index: -1;
       opacity: 0.2;
     }
-    .cta-box h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; }
-    .cta-box p { color: var(--text-secondary); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-box h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; color: #1a1a2e; }
+    .cta-box p { color: #4a4a6a; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
     .cta-code {
-      background: var(--bg-primary);
-      border: 1px solid var(--border);
+      background: #1a1a2e;
+      border: 1px solid #2d2d48;
       border-radius: 12px;
       padding: 20px 32px;
       font-family: var(--font-mono);

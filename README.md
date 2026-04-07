@@ -16,7 +16,7 @@ When AI agents work without guardrails:
 
 ## The Solution
 
-This repository provides **21 production playbooks** organized across a **7-stage delivery pipeline**. Each playbook is a structured, executable workflow — not a reference document. Agents follow steps, produce artifacts, and meet exit criteria before proceeding.
+This repository provides **21 production playbooks**, **10 agent skills**, **4 specialist guardians**, and **5 operational runbooks** organized across a **7-stage delivery pipeline**. Each playbook is a structured, executable workflow — not a reference document. Agents follow steps, produce artifacts, and meet exit criteria before proceeding.
 
 ## The Pipeline
 
@@ -89,6 +89,23 @@ Monitor, learn, and improve after deployment.
 | Playbook | Purpose |
 |----------|---------|
 | [Observability & Ops](playbooks/observability-and-ops/PLAYBOOK.md) | Post-deploy monitoring, alerting, and incident response |
+
+## Agent Skills
+
+Skills are **competency profiles** that define how AI agents should behave across all pipeline stages. Unlike playbooks (which are workflows), skills are persistent capabilities agents carry throughout a session.
+
+| Skill | Capability |
+|-------|-----------|
+| [Codebase Navigation](skills/codebase-navigation/SKILL.md) | Efficiently explore, map, and understand unfamiliar codebases |
+| [Requirement Extraction](skills/requirement-extraction/SKILL.md) | Transform vague inputs into structured, testable requirements |
+| [Safe Refactoring](skills/safe-refactoring/SKILL.md) | Restructure code without changing behavior, verified by tests |
+| [Dependency Assessment](skills/dependency-assessment/SKILL.md) | Evaluate packages on maintenance, security, size, and licensing |
+| [Error Interpretation](skills/error-interpretation/SKILL.md) | Read error messages and stack traces systematically |
+| [Context Window Management](skills/context-window-management/SKILL.md) | Load the right information and omit the noise |
+| [Multi-Agent Collaboration](skills/multi-agent-collaboration/SKILL.md) | Coordinate when multiple agents work on the same codebase |
+| [Human Escalation](skills/human-escalation/SKILL.md) | Know when to stop and involve a human decision-maker |
+| [Incremental Verification](skills/incremental-verification/SKILL.md) | Verify work at every step, not just at the end |
+| [Production Awareness](skills/production-awareness/SKILL.md) | Think about production consequences while writing code |
 
 ## Quick Start
 

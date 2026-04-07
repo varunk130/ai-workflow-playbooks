@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Workflow Playbooks — Production-Grade Agent Skills</title>
+  <meta name="description" content="21 playbooks, 10 agent skills, 4 guardians, 5 runbooks for AI coding agents in production workflows.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #12121a;
+      --bg-card: #1a1a25;
+      --bg-card-hover: #22222f;
+      --border: #2a2a3a;
+      --border-glow: #4f46e5;
+      --text-primary: #f0f0f5;
+      --text-secondary: #9090a8;
+      --text-muted: #606078;
+      --accent-indigo: #6366f1;
+      --accent-violet: #8b5cf6;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-orange: #f97316;
+      --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6);
+      --gradient-hero: linear-gradient(135deg, #6366f1 0%, #06b6d4 50%, #10b981 100%);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Animated background grid */
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(99,102,241,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      z-index: -1;
+    }
+
+    /* Glow orbs */
+    .glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      pointer-events: none;
+    }
+    .glow-orb-1 { width: 600px; height: 600px; background: var(--accent-indigo); top: -200px; left: -100px; }
+    .glow-orb-2 { width: 500px; height: 500px; background: var(--accent-cyan); top: 300px; right: -150px; }
+    .glow-orb-3 { width: 400px; height: 400px; background: var(--accent-violet); bottom: -100px; left: 30%; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    nav .container { display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand {
+      font-weight: 800; font-size: 18px;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a {
+      color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+    .nav-cta {
+      background: var(--gradient-primary) !important;
+      color: white !important;
+      padding: 8px 20px; border-radius: 8px;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 120px 0 80px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 13px; font-weight: 500; color: var(--accent-indigo);
+      margin-bottom: 24px;
+    }
+    .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-emerald); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+    .hero h1 .gradient-text {
+      background: var(--gradient-hero);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 18px; color: var(--text-secondary);
+      max-width: 640px; margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero-stats {
+      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+      margin-top: 48px;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-size: 36px; font-weight: 800;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label { font-size: 13px; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+    .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 12px;
+      font-size: 15px; font-weight: 600; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--gradient-primary); color: white;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(99,102,241,0.4); }
+    .btn-secondary {
+      background: var(--bg-card); color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--accent-indigo); background: var(--bg-card-hover); }
+
+    /* Pipeline */
+    .pipeline-section { padding: 80px 0; }
+    .section-label {
+      font-size: 13px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent-indigo); margin-bottom: 12px;
+    }
+    .section-title { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .section-desc { font-size: 16px; color: var(--text-secondary); max-width: 560px; margin-bottom: 48px; }
+
+    .pipeline-track {
+      display: flex; gap: 4px; margin-bottom: 48px; overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    .pipeline-stage {
+      flex: 1; min-width: 140px;
+      padding: 16px 12px; text-align: center;
+      border-radius: 12px; cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+      position: relative;
+    }
+    .pipeline-stage:hover, .pipeline-stage.active {
+      background: var(--bg-card);
+      border-color: var(--border);
+    }
+    .pipeline-stage.active { border-color: var(--accent-indigo); }
+    .pipeline-stage .stage-num {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; margin-bottom: 4px;
+    }
+    .pipeline-stage .stage-name { font-size: 15px; font-weight: 700; }
+    .pipeline-stage .stage-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+    .stage-color-1 .stage-num { color: var(--accent-violet); }
+    .stage-color-2 .stage-num { color: var(--accent-indigo); }
+    .stage-color-3 .stage-num { color: var(--accent-cyan); }
+    .stage-color-4 .stage-num { color: var(--accent-rose); }
+    .stage-color-5 .stage-num { color: var(--accent-emerald); }
+    .stage-color-6 .stage-num { color: var(--accent-amber); }
+    .stage-color-7 .stage-num { color: var(--accent-orange); }
+
+    /* Cards grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(99,102,241,0.08);
+    }
+    .card-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; margin-bottom: 16px;
+    }
+    .card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+    .card-tag {
+      display: inline-block; margin-top: 12px;
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.08em; padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .tag-discover { background: rgba(139,92,246,0.1); color: var(--accent-violet); }
+    .tag-architect { background: rgba(99,102,241,0.1); color: var(--accent-indigo); }
+    .tag-construct { background: rgba(6,182,212,0.1); color: var(--accent-cyan); }
+    .tag-harden { background: rgba(244,63,94,0.1); color: var(--accent-rose); }
+    .tag-validate { background: rgba(16,185,129,0.1); color: var(--accent-emerald); }
+    .tag-release { background: rgba(245,158,11,0.1); color: var(--accent-amber); }
+    .tag-operate { background: rgba(249,115,22,0.1); color: var(--accent-orange); }
+    .tag-skill { background: rgba(99,102,241,0.1); color: var(--accent-indigo); }
+    .tag-guardian { background: rgba(244,63,94,0.1); color: var(--accent-rose); }
+    .tag-runbook { background: rgba(16,185,129,0.1); color: var(--accent-emerald); }
+
+    .icon-discover { background: rgba(139,92,246,0.15); color: var(--accent-violet); }
+    .icon-architect { background: rgba(99,102,241,0.15); color: var(--accent-indigo); }
+    .icon-construct { background: rgba(6,182,212,0.15); color: var(--accent-cyan); }
+    .icon-harden { background: rgba(244,63,94,0.15); color: var(--accent-rose); }
+    .icon-validate { background: rgba(16,185,129,0.15); color: var(--accent-emerald); }
+    .icon-release { background: rgba(245,158,11,0.15); color: var(--accent-amber); }
+    .icon-operate { background: rgba(249,115,22,0.15); color: var(--accent-orange); }
+    .icon-skill { background: rgba(99,102,241,0.15); color: var(--accent-indigo); }
+    .icon-guardian { background: rgba(244,63,94,0.15); color: var(--accent-rose); }
+    .icon-runbook { background: rgba(16,185,129,0.15); color: var(--accent-emerald); }
+
+    /* Skills section */
+    .skills-section, .guardians-section, .runbooks-section { padding: 80px 0; }
+
+    /* Architecture section */
+    .arch-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+    .arch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .arch-item {
+      padding: 24px;
+      border-radius: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+    }
+    .arch-item h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .arch-item p { font-size: 13px; color: var(--text-secondary); }
+    .arch-num {
+      font-size: 32px; font-weight: 900;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    /* CTA */
+    .cta-section {
+      padding: 100px 0;
+      text-align: center;
+    }
+    .cta-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 64px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: var(--gradient-primary);
+      border-radius: 25px;
+      z-index: -1;
+      opacity: 0.2;
+    }
+    .cta-box h2 { font-size: 32px; font-weight: 800; margin-bottom: 16px; }
+    .cta-box p { color: var(--text-secondary); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-code {
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 32px;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--accent-cyan);
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    footer a { color: var(--accent-indigo); text-decoration: none; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero { padding: 80px 0 40px; }
+      .hero-stats { gap: 32px; }
+      .nav-links { display: none; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .pipeline-track { gap: 2px; }
+      .pipeline-stage { min-width: 100px; padding: 12px 8px; }
+      .pipeline-stage .stage-name { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+
+  <nav>
+    <div class="container">
+      <div class="nav-brand">AI Workflow Playbooks</div>
+      <div class="nav-links">
+        <a href="#pipeline">Pipeline</a>
+        <a href="#skills">Skills</a>
+        <a href="#guardians">Guardians</a>
+        <a href="#runbooks">Runbooks</a>
+        <a href="https://github.com/varunk130/ai-workflow-playbooks" class="nav-cta">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="container">
+      <div class="hero-badge"><span class="dot"></span> Open Source &middot; MIT Licensed</div>
+      <h1>
+        Production-Grade<br>
+        <span class="gradient-text">Agent Skills</span> for<br>
+        AI Workflows
+      </h1>
+      <p>21 playbooks, 10 agent skills, 4 specialist guardians, and 5 operational runbooks — structured workflows that bring engineering discipline to AI coding agents across the full delivery pipeline.</p>
+      <div class="hero-buttons">
+        <a href="https://github.com/varunk130/ai-workflow-playbooks" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View on GitHub
+        </a>
+        <a href="#pipeline" class="btn btn-secondary">Explore the Pipeline</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-number">21</div><div class="stat-label">Playbooks</div></div>
+        <div class="stat"><div class="stat-number">10</div><div class="stat-label">Agent Skills</div></div>
+        <div class="stat"><div class="stat-number">4</div><div class="stat-label">Guardians</div></div>
+        <div class="stat"><div class="stat-number">5</div><div class="stat-label">Runbooks</div></div>
+        <div class="stat"><div class="stat-number">7</div><div class="stat-label">Pipeline Stages</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pipeline -->
+  <section class="pipeline-section" id="pipeline">
+    <div class="container">
+      <div class="section-label">The Pipeline</div>
+      <div class="section-title">7-Stage Delivery Pipeline</div>
+      <div class="section-desc">Every task flows through a structured pipeline. Not every task needs every stage, but skipping should be deliberate.</div>
+
+      <div class="pipeline-track">
+        <div class="pipeline-stage stage-color-1 active"><div class="stage-num">Stage 1</div><div class="stage-name">Discover</div><div class="stage-sub">Ideate &middot; Scope</div></div>
+        <div class="pipeline-stage stage-color-2"><div class="stage-num">Stage 2</div><div class="stage-name">Architect</div><div class="stage-sub">Design &middot; Plan</div></div>
+        <div class="pipeline-stage stage-color-3"><div class="stage-num">Stage 3</div><div class="stage-name">Construct</div><div class="stage-sub">Build &middot; Wire</div></div>
+        <div class="pipeline-stage stage-color-4"><div class="stage-num">Stage 4</div><div class="stage-name">Harden</div><div class="stage-sub">Armor &middot; Guard</div></div>
+        <div class="pipeline-stage stage-color-5"><div class="stage-num">Stage 5</div><div class="stage-name">Validate</div><div class="stage-sub">Prove &middot; Gate</div></div>
+        <div class="pipeline-stage stage-color-6"><div class="stage-num">Stage 6</div><div class="stage-name">Release</div><div class="stage-sub">Ship &middot; Deploy</div></div>
+        <div class="pipeline-stage stage-color-7"><div class="stage-num">Stage 7</div><div class="stage-name">Operate</div><div class="stage-sub">Watch &middot; Learn</div></div>
+      </div>
+
+      <div class="cards-grid">
+        <!-- DISCOVER -->
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/discovery-and-ideation/PLAYBOOK.md"><div class="card-icon icon-discover">&#128161;</div><h3>Discovery & Ideation</h3><p>Structured exploration of problem space and solution candidates before commitment.</p><span class="card-tag tag-discover">Discover</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/specification-authoring/PLAYBOOK.md"><div class="card-icon icon-discover">&#128196;</div><h3>Specification Authoring</h3><p>Complete, unambiguous spec as the single source of truth for implementation.</p><span class="card-tag tag-discover">Discover</span></a>
+        <!-- ARCHITECT -->
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/architecture-and-decomposition/PLAYBOOK.md"><div class="card-icon icon-architect">&#127959;</div><h3>Architecture & Decomposition</h3><p>Break specs into ordered, independently verifiable work units.</p><span class="card-tag tag-architect">Architect</span></a>
+        <!-- CONSTRUCT -->
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/iterative-construction/PLAYBOOK.md"><div class="card-icon icon-construct">&#128736;</div><h3>Iterative Construction</h3><p>Build in thin vertical slices with continuous integration.</p><span class="card-tag tag-construct">Construct</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/test-first-engineering/PLAYBOOK.md"><div class="card-icon icon-construct">&#9989;</div><h3>Test-First Engineering</h3><p>Red-green-refactor with a disciplined test pyramid strategy.</p><span class="card-tag tag-construct">Construct</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/context-orchestration/PLAYBOOK.md"><div class="card-icon icon-construct">&#127911;</div><h3>Context Orchestration</h3><p>Feed agents the right context at the right moment.</p><span class="card-tag tag-construct">Construct</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/interface-craftsmanship/PLAYBOOK.md"><div class="card-icon icon-construct">&#127912;</div><h3>Interface Craftsmanship</h3><p>Accessible, maintainable, performant frontend systems.</p><span class="card-tag tag-construct">Construct</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/contract-first-apis/PLAYBOOK.md"><div class="card-icon icon-construct">&#128279;</div><h3>Contract-First APIs</h3><p>Design APIs from the contract outward with consistent error shapes.</p><span class="card-tag tag-construct">Construct</span></a>
+        <!-- HARDEN -->
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/threat-mitigation/PLAYBOOK.md"><div class="card-icon icon-harden">&#128737;</div><h3>Threat Mitigation</h3><p>Systematic security hardening across all system boundaries.</p><span class="card-tag tag-harden">Harden</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/throughput-tuning/PLAYBOOK.md"><div class="card-icon icon-harden">&#9889;</div><h3>Throughput Tuning</h3><p>Measure-first performance optimization with budgets.</p><span class="card-tag tag-harden">Harden</span></a>
+        <!-- VALIDATE -->
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/runtime-diagnostics/PLAYBOOK.md"><div class="card-icon icon-validate">&#128300;</div><h3>Runtime Diagnostics</h3><p>Browser and runtime verification using live instrumentation.</p><span class="card-tag tag-validate">Validate</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/fault-isolation-and-recovery/PLAYBOOK.md"><div class="card-icon icon-validate">&#128027;</div><h3>Fault Isolation & Recovery</h3><p>Systematic debugging from reproduction to resolution.</p><span class="card-tag tag-validate">Validate</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/peer-review-protocol/PLAYBOOK.md"><div class="card-icon icon-validate">&#128101;</div><h3>Peer Review Protocol</h3><p>Multi-axis code review with clear severity and verdicts.</p><span class="card-tag tag-validate">Validate</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/complexity-reduction/PLAYBOOK.md"><div class="card-icon icon-validate">&#9986;</div><h3>Complexity Reduction</h3><p>Simplify code while preserving behavior.</p><span class="card-tag tag-validate">Validate</span></a>
+        <!-- RELEASE -->
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/version-control-discipline/PLAYBOOK.md"><div class="card-icon icon-release">&#128200;</div><h3>Version Control Discipline</h3><p>Atomic commits, trunk-based flow, clean history.</p><span class="card-tag tag-release">Release</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/pipeline-automation/PLAYBOOK.md"><div class="card-icon icon-release">&#9881;</div><h3>Pipeline Automation</h3><p>CI/CD with quality gates and fast feedback.</p><span class="card-tag tag-release">Release</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/sunset-and-evolution/PLAYBOOK.md"><div class="card-icon icon-release">&#127765;</div><h3>Sunset & Evolution</h3><p>Managed deprecation and migration paths.</p><span class="card-tag tag-release">Release</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/knowledge-capture/PLAYBOOK.md"><div class="card-icon icon-release">&#128214;</div><h3>Knowledge Capture</h3><p>ADRs, API docs, and living documentation.</p><span class="card-tag tag-release">Release</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/release-orchestration/PLAYBOOK.md"><div class="card-icon icon-release">&#128640;</div><h3>Release Orchestration</h3><p>Staged rollouts, feature flags, and go-live checklists.</p><span class="card-tag tag-release">Release</span></a>
+        <!-- OPERATE -->
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/playbooks/observability-and-ops/PLAYBOOK.md"><div class="card-icon icon-operate">&#128225;</div><h3>Observability & Ops</h3><p>Post-deploy monitoring, alerting, and incident response.</p><span class="card-tag tag-operate">Operate</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-label">Agent Skills</div>
+      <div class="section-title">10 Core Competencies</div>
+      <div class="section-desc">Persistent capabilities agents carry throughout a session. Skills define HOW agents behave; playbooks define WHAT workflow to follow.</div>
+
+      <div class="cards-grid">
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/codebase-navigation/SKILL.md"><div class="card-icon icon-skill">&#128269;</div><h3>Codebase Navigation</h3><p>Explore, map, and understand unfamiliar codebases before making changes.</p><span class="card-tag tag-skill">Skill</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/requirement-extraction/SKILL.md"><div class="card-icon icon-skill">&#128172;</div><h3>Requirement Extraction</h3><p>Transform vague inputs into structured, testable requirements.</p><span class="card-tag tag-skill">Skill</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/safe-refactoring/SKILL.md"><div class="card-icon icon-skill">&#128260;</div><h3>Safe Refactoring</h3><p>Restructure code without changing behavior, verified by tests at every step.</p><span class="card-tag tag-skill">Skill</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/dependency-assessment/SKILL.md"><div class="card-icon icon-skill">&#128230;</div><h3>Dependency Assessment</h3><p>Evaluate packages on maintenance, security, size, and licensing.</p><span class="card-tag tag-skill">Skill</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/error-interpretation/SKILL.md"><div class="card-icon icon-skill">&#128680;</div><h3>Error Interpretation</h3><p>Read error messages and stack traces systematically.</p><span class="card-tag tag-skill">Skill</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/context-window-management/SKILL.md"><div class="card-icon icon-skill">&#127760;</div><h3>Context Window Management</h3><p>Load the right information and omit the noise.</p><span class="card-tag tag-skill">Skill</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/multi-agent-collaboration/SKILL.md"><div class="card-icon icon-skill">&#129309;</div><h3>Multi-Agent Collaboration</h3><p>Coordinate when multiple agents work on the same codebase.</p><span class="card-tag tag-skill">Skill</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/human-escalation/SKILL.md"><div class="card-icon icon-skill">&#128075;</div><h3>Human Escalation</h3><p>Know when to stop and involve a human decision-maker.</p><span class="card-tag tag-skill">Skill</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/incremental-verification/SKILL.md"><div class="card-icon icon-skill">&#128203;</div><h3>Incremental Verification</h3><p>Verify work at every step, not just at the end.</p><span class="card-tag tag-skill">Skill</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/skills/production-awareness/SKILL.md"><div class="card-icon icon-skill">&#127981;</div><h3>Production Awareness</h3><p>Think about production consequences while writing code.</p><span class="card-tag tag-skill">Skill</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guardians -->
+  <section class="guardians-section" id="guardians">
+    <div class="container">
+      <div class="section-label">Specialist Guardians</div>
+      <div class="section-title">4 Review Personas</div>
+      <div class="section-desc">Load a guardian for focused, specialist-level review. Each brings a different lens to your code.</div>
+
+      <div class="cards-grid">
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/guardians/architecture-guardian.md"><div class="card-icon icon-guardian">&#127959;</div><h3>Architecture Guardian</h3><p>Principal Engineer perspective on system design, API contracts, data flow, and structural integrity.</p><span class="card-tag tag-guardian">Guardian</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/guardians/quality-guardian.md"><div class="card-icon icon-guardian">&#9989;</div><h3>Quality Guardian</h3><p>QA Lead perspective on test coverage, test quality, edge cases, and verification rigor.</p><span class="card-tag tag-guardian">Guardian</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/guardians/security-guardian.md"><div class="card-icon icon-guardian">&#128274;</div><h3>Security Guardian</h3><p>AppSec Engineer perspective on vulnerabilities, threat modeling, and secure coding.</p><span class="card-tag tag-guardian">Guardian</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/guardians/operations-guardian.md"><div class="card-icon icon-guardian">&#128225;</div><h3>Operations Guardian</h3><p>SRE Lead perspective on deployability, observability, and incident readiness.</p><span class="card-tag tag-guardian">Guardian</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Runbooks -->
+  <section class="runbooks-section" id="runbooks">
+    <div class="container">
+      <div class="section-label">Operational Runbooks</div>
+      <div class="section-title">5 Reference Checklists</div>
+      <div class="section-desc">Detailed checklists loaded on demand when a playbook or guardian needs deeper reference material.</div>
+
+      <div class="cards-grid">
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/runbooks/testing-patterns.md"><div class="card-icon icon-runbook">&#129514;</div><h3>Testing Patterns</h3><p>AAA structure, mocking, component testing, E2E patterns, and anti-patterns.</p><span class="card-tag tag-runbook">Runbook</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/runbooks/security-baseline.md"><div class="card-icon icon-runbook">&#128737;</div><h3>Security Baseline</h3><p>OWASP Top 10, auth, input validation, headers, CORS, and dependency auditing.</p><span class="card-tag tag-runbook">Runbook</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/runbooks/performance-baseline.md"><div class="card-icon icon-runbook">&#9889;</div><h3>Performance Baseline</h3><p>Core Web Vitals, frontend/backend optimization, and measurement commands.</p><span class="card-tag tag-runbook">Runbook</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/runbooks/accessibility-baseline.md"><div class="card-icon icon-runbook">&#9855;</div><h3>Accessibility Baseline</h3><p>WCAG 2.1 AA, keyboard nav, screen readers, ARIA, and testing tools.</p><span class="card-tag tag-runbook">Runbook</span></a>
+        <a class="card" href="https://github.com/varunk130/ai-workflow-playbooks/blob/main/runbooks/incident-response.md"><div class="card-icon icon-runbook">&#128680;</div><h3>Incident Response</h3><p>Severity levels, triage, communication, resolution, and postmortem templates.</p><span class="card-tag tag-runbook">Runbook</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Principles -->
+  <section class="arch-section" id="principles">
+    <div class="container">
+      <div class="section-label">Design Principles</div>
+      <div class="section-title">Built for Production</div>
+      <div class="arch-grid">
+        <div class="arch-item"><div class="arch-num">01</div><h3>Workflows, Not Wikis</h3><p>Each playbook is a step-by-step process agents execute, not a reference article they browse.</p></div>
+        <div class="arch-item"><div class="arch-num">02</div><h3>Guardrails Over Guidelines</h3><p>Exit criteria must be met with evidence. Promises don't count.</p></div>
+        <div class="arch-item"><div class="arch-num">03</div><h3>Anti-Pattern Inoculation</h3><p>Every playbook documents common shortcuts and why they fail.</p></div>
+        <div class="arch-item"><div class="arch-num">04</div><h3>Progressive Loading</h3><p>Core playbook stays focused. Runbooks load only when needed.</p></div>
+        <div class="arch-item"><div class="arch-num">05</div><h3>Agent-Agnostic</h3><p>Plain Markdown works with Claude Code, Cursor, Copilot, Gemini, or any agent.</p></div>
+        <div class="arch-item"><div class="arch-num">06</div><h3>Production-First</h3><p>The pipeline extends through deployment into operations and observability.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Start Building with Discipline</h2>
+        <p>Clone the repo, load the playbooks into your AI agent, and bring production engineering standards to every line of code.</p>
+        <div class="cta-code">git clone https://github.com/varunk130/ai-workflow-playbooks.git</div>
+        <br><br>
+        <a href="https://github.com/varunk130/ai-workflow-playbooks" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          Get Started
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>AI Workflow Playbooks &middot; Built by <a href="https://github.com/varunk130">Varun Kulkarni</a> &middot; MIT License</p>
+    </div>
+  </footer>
+
+  <script>
+    // Pipeline stage click interaction
+    document.querySelectorAll('.pipeline-stage').forEach(stage => {
+      stage.addEventListener('click', () => {
+        document.querySelectorAll('.pipeline-stage').forEach(s => s.classList.remove('active'));
+        stage.classList.add('active');
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 **Production-grade operational playbooks for AI coding agents across the full software delivery pipeline.**
 
-AI agents are powerful — but without structured guidance, they cut corners. They skip specifications, ignore edge cases, bypass security reviews, and ship untested code. These playbooks encode the operational discipline of seasoned engineering teams into repeatable, verifiable workflows that any AI agent can follow consistently.
+AI agents are powerful — but without structured guidance, they cut corners: skipping specifications, ignoring edge cases, bypassing security reviews, and shipping untested code. These playbooks encode the operational discipline of seasoned engineering teams into repeatable, verifiable workflows that any AI agent can follow consistently.
 
 ## The Problem
 

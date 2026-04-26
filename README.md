@@ -92,7 +92,7 @@ Monitor, learn, and improve after deployment.
 
 ## Agent Skills
 
-Skills are **competency profiles** that define how AI agents should behave across all pipeline stages. Unlike playbooks (which are workflows), skills are persistent capabilities agents carry throughout a session.
+Skills are **persistent competency profiles** that define how AI agents behave across all pipeline stages. Unlike playbooks (which are step-by-step workflows), skills are capabilities agents carry throughout a session.
 
 | Skill | Capability |
 |-------|-----------|

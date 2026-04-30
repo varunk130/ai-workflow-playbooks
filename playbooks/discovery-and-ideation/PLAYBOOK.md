@@ -1,6 +1,6 @@
 ---
 name: discovery-and-ideation
-trigger: Use when exploring a new problem, brainstorming solutions, or scoping a project before writing a specification.
+trigger: Use when exploring a new problem, brainstorming solutions, or scoping a project before a specification is written.
 ---
 
 # Discovery & Ideation

@@ -1,6 +1,6 @@
 # Playbook Anatomy
 
-This document describes the standard structure of a playbook. Follow this format when creating new playbooks.
+This document describes the standard structure of a playbook. Follow this format whenever you create a new playbook.
 
 ## File Location
 

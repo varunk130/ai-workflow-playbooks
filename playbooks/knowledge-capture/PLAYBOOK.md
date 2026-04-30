@@ -1,6 +1,6 @@
 ---
 name: knowledge-capture
-trigger: When making an architectural decision, creating an API, or onboarding a new team member
+trigger: Use when making an architectural decision, designing an API, or onboarding a new team member.
 ---
 
 # Knowledge Capture

@@ -2,7 +2,7 @@
 
 ## Overview
 
-AI Workflow Playbooks provides structured, executable workflows for AI coding agents. Each playbook guides an agent through a specific phase of software delivery with clear steps, exit criteria, and anti-pattern guards.
+AI Workflow Playbooks provides structured, executable workflows that AI coding agents can follow end to end. Each playbook guides an agent through a specific phase of software delivery with clear steps, exit criteria, and anti-pattern guards.
 
 ## Quick Start
 

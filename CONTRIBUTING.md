@@ -1,6 +1,6 @@
 # Contributing to AI Workflow Playbooks
 
-Thank you for helping improve these playbooks. This guide covers quality standards, structure conventions, and the review process.
+Thanks for helping improve these playbooks! This guide covers quality standards, structure conventions, and the review process.
 
 ## Playbook Quality Standards
 

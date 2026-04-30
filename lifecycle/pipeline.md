@@ -1,5 +1,7 @@
 # AI Workflow Playbooks — Pipeline Reference
 
+A quick reference for the seven delivery stages and the playbooks that power each one.
+
 ## The 7-Stage Delivery Pipeline
 
 ```

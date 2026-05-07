@@ -2,6 +2,7 @@
 
 Notable changes to this project, newest first.
 
+- 2026-05-07 — Documentation: surfaced the 7-stage pipeline mnemonic in the project context for quicker agent onboarding.
 - 2026-05-02 — Documentation polish: tightened README phrasing and clarified install steps.
 - 2026-05-02 — Maintenance: normalized markdown table spacing across docs.
 - 2026-05-02 — Documentation: added cross-references between related docs.

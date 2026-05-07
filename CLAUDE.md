@@ -15,6 +15,8 @@ This repository contains structured engineering playbooks designed for AI coding
 
 DISCOVER → ARCHITECT → CONSTRUCT → HARDEN → VALIDATE → RELEASE → OPERATE
 
+Each stage gates the next: an agent must satisfy a stage's exit criteria before proceeding. Skipping stages is an anti-pattern; a guardian review is required at HARDEN and VALIDATE.
+
 ## Conventions
 
 - Playbook files are named `PLAYBOOK.md`

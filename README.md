@@ -1,8 +1,34 @@
-# AI Workflow Playbooks
+<div align="center">
 
-**Production-grade operational playbooks for AI coding agents across the full software delivery pipeline.**
+# 🛠 AI Workflow Playbooks
+
+### Production-grade operational playbooks for AI coding agents across the full software delivery pipeline
+
+[![Playbooks](https://img.shields.io/badge/Playbooks-21-blue?style=for-the-badge)](#the-pipeline)
+[![Skills](https://img.shields.io/badge/Skills-10-blueviolet?style=for-the-badge)](#agent-skills)
+[![Guardians](https://img.shields.io/badge/Guardians-4-orange?style=for-the-badge)](#guardians)
+[![Runbooks](https://img.shields.io/badge/Runbooks-5-green?style=for-the-badge)](#runbooks)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Built with Claude Code](https://img.shields.io/badge/Built_with-Claude_Code-D97757?logo=anthropic&logoColor=white&style=for-the-badge)](https://claude.ai/code)
+
+**Maintained by [Varun Kulkarni](https://github.com/varunk130)** · [Quick Start ↓](#-quick-start) · [Pipeline Stages ↓](#the-pipeline) · [Contributing](CONTRIBUTING.md)
+
+</div>
+
+---
 
 AI agents are powerful — but without structured guardrails, they cut corners: skipping specifications, ignoring edge cases, bypassing security reviews, and shipping untested code. These playbooks encode the operational discipline of seasoned engineering teams into repeatable, verifiable workflows that any AI agent can follow consistently.
+
+## ⚡ TL;DR — Get Started in 60 Seconds
+
+```bash
+git clone https://github.com/varunk130/ai-workflow-playbooks.git
+claude --plugin-dir /path/to/ai-workflow-playbooks
+# Then in Claude Code, run any pipeline command:
+#   /discover  /architect  /construct  /harden  /validate  /release  /operate
+```
+
+> Full setup, Cursor/Copilot/Gemini integration, and per-stage details: see [⚡ Quick Start](#-quick-start) below.
 
 ## The Problem
 
@@ -20,13 +46,22 @@ This repository provides **21 production playbooks**, **10 agent skills**, **4 s
 
 ## The Pipeline
 
+```mermaid
+flowchart LR
+    A["🔎 DISCOVER<br/>Ideate · Scope"] --> B["📐 ARCHITECT<br/>Design · Plan"]
+    B --> C["🛠 CONSTRUCT<br/>Build · Wire"]
+    C --> D["🛡 HARDEN<br/>Armor · Guard"]
+    D --> E["✅ VALIDATE<br/>Prove · Gate"]
+    E --> F["🚀 RELEASE<br/>Ship · Deploy"]
+    F --> G["📡 OPERATE<br/>Watch · Learn"]
+
+    classDef stage fill:#1a73e8,color:#fff,stroke:#1558b0,stroke-width:2px,rx:8,ry:8
+    classDef gate fill:#ea8600,color:#fff,stroke:#c57200,stroke-width:2px,rx:8,ry:8
+    class A,B,C,F,G stage
+    class D,E gate
 ```
- DISCOVER → ARCHITECT → CONSTRUCT → HARDEN → VALIDATE → RELEASE → OPERATE
- ┌────────┐ ┌─────────┐ ┌──────────┐ ┌───────┐ ┌────────┐ ┌────────┐ ┌────────┐
- │ Ideate │ │ Design  │ │  Build   │ │ Armor │ │ Prove  │ │ Ship   │ │ Watch  │
- │ Scope  │ │ Plan    │ │  Wire    │ │ Guard │ │ Gate   │ │ Deploy │ │ Learn  │
- └────────┘ └─────────┘ └──────────┘ └───────┘ └────────┘ └────────┘ └────────┘
-```
+
+> 🛡 Stages **HARDEN** and **VALIDATE** are gating reviews — a guardian must sign off before the agent proceeds.
 
 ### Stage 1: DISCOVER
 Define and refine what you're building.

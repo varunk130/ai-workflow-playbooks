@@ -125,6 +125,14 @@ Monitor, learn, and improve after deployment.
 |----------|---------|
 | [Observability & Ops](playbooks/observability-and-ops/PLAYBOOK.md) | Post-deploy monitoring, alerting, and incident response |
 
+### Cross-Cutting: Meta
+
+| Playbook | Purpose |
+|----------|---------|
+| [Meta — How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) | The onboarding playbook: pick the right playbook for the task and stage you're in |
+
+> ℹ️ **New here? Start with the [Meta — How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) playbook** — it's the entry point that routes you to the right stage.
+
 ## Agent Skills
 
 Skills are **persistent competency profiles** that define how AI agents behave across all pipeline stages. Unlike playbooks (which are step-by-step workflows), skills are capabilities agents carry throughout a session.
@@ -201,8 +209,9 @@ Operational checklists loaded on demand:
 
 ## Recommended Starting Set
 
-If you're new, start with these three:
+If you're new, start with these:
 
+0. **[Meta — How To Use](playbooks/meta-how-to-use/PLAYBOOK.md)** — Routes you to the right playbook for what you're doing
 1. **Specification Authoring** — Forces clear requirements before code
 2. **Test-First Engineering** — Ensures correctness through tests
 3. **Peer Review Protocol** — Catches issues before merge

@@ -5,6 +5,7 @@ This repository contains structured engineering playbooks designed for AI coding
 ## Repository Layout
 
 - `playbooks/` — 21 operational playbooks organized by pipeline stage
+- `skills/` — 10 agent skills loaded on demand to augment the playbooks
 - `guardians/` — 4 specialist review personas (architecture, quality, security, operations)
 - `runbooks/` — 5 cross-cutting operational checklists
 - `lifecycle/` — Pipeline stage documentation and hooks

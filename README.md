@@ -161,7 +161,7 @@ claude --plugin-dir /path/to/ai-workflow-playbooks
 ```
 
 Then use pipeline commands:
-```
+```text
 /discover   → Explore and scope the problem
 /architect  → Plan the system and decompose tasks
 /construct  → Build incrementally with tests

@@ -14,7 +14,7 @@ claude --plugin-dir /path/to/ai-workflow-playbooks
 ```
 
 Use pipeline commands directly:
-```
+```text
 /discover    — Explore problem space and write specifications
 /architect   — Plan tasks and dependencies
 /construct   — Build with tests
@@ -58,7 +58,7 @@ Start with these three playbooks for the highest impact:
 
 Load guardians when you need focused expertise:
 
-```
+```text
 Load guardians/architecture-guardian.md for system design review
 Load guardians/quality-guardian.md for test coverage assessment
 Load guardians/security-guardian.md for security audit
@@ -69,7 +69,7 @@ Load guardians/operations-guardian.md for deployment readiness
 
 Runbooks provide detailed checklists loaded on demand:
 
-```
+```text
 Load runbooks/testing-patterns.md for test examples and patterns
 Load runbooks/security-baseline.md for OWASP and auth checklists
 Load runbooks/performance-baseline.md for Core Web Vitals and optimization

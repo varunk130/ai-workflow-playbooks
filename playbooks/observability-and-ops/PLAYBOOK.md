@@ -40,26 +40,26 @@ This follows the RED method (Rate, Errors, Duration) for request-driven services
 ### Step 2: Instrument the Application
 Add observability at three layers:
 
-**Metrics** — Counters, gauges, histograms:
+**Metrics** - Counters, gauges, histograms:
 - Request count by endpoint, method, and status code
 - Response latency histograms (p50, p95, p99)
 - Active connection counts
 - Queue depths and processing times
 - Business metrics (signups, orders, completions)
 
-**Logs** — Structured, contextual, leveled:
+**Logs** - Structured, contextual, leveled:
 - Use structured logging (JSON) with consistent field names
 - Include correlation/request IDs in every log line
 - Log at appropriate levels: ERROR for failures, WARN for degradation, INFO for significant events, DEBUG for troubleshooting
 - Never log sensitive data (passwords, tokens, PII)
 
-**Traces** — Distributed request flow:
+**Traces** - Distributed request flow:
 - Propagate trace context across service boundaries
 - Instrument external calls (database queries, HTTP requests, message queues)
 - Record span metadata (query text, endpoint, status)
 
 ### Step 3: Configure Alerting
-Alerts should be actionable — every alert must have a response procedure.
+Alerts should be actionable - every alert must have a response procedure.
 
 | Alert Type | Threshold | Severity | Response |
 |-----------|-----------|----------|----------|
@@ -72,24 +72,24 @@ Alerts should be actionable — every alert must have a response procedure.
 Rules for good alerts:
 - Every alert has a documented runbook link
 - Alerts fire on symptoms (user impact), not causes (CPU usage alone)
-- Tune thresholds to avoid alert fatigue — if it fires daily and gets ignored, it's broken
+- Tune thresholds to avoid alert fatigue - if it fires daily and gets ignored, it's broken
 - Group related alerts to reduce noise
 
 ### Step 4: Build Dashboards
 Create operational dashboards with progressive detail:
 
-**Level 1 — Service Health** (glanceable):
+**Level 1 - Service Health** (glanceable):
 - Overall request rate, error rate, latency
 - Service up/down status
 - Active incidents
 
-**Level 2 — Component Detail** (investigative):
+**Level 2 - Component Detail** (investigative):
 - Per-endpoint metrics
 - Database query performance
 - External dependency latency and error rates
 - Cache hit ratios
 
-**Level 3 — Debug** (root cause analysis):
+**Level 3 - Debug** (root cause analysis):
 - Trace waterfall views
 - Log search by correlation ID
 - Resource utilization over time
@@ -97,11 +97,11 @@ Create operational dashboards with progressive detail:
 ### Step 5: Establish Incident Response Readiness
 Before considering a service production-ready:
 
-1. **Runbook exists** — Documented procedures for common failure scenarios
-2. **On-call rotation is defined** — Someone is responsible for responding
-3. **Rollback procedure is tested** — You can revert to the previous version quickly
-4. **Communication channels are set** — Where incidents are reported and coordinated
-5. **Postmortem template is ready** — How learnings are captured after resolution
+1. **Runbook exists** - Documented procedures for common failure scenarios
+2. **On-call rotation is defined** - Someone is responsible for responding
+3. **Rollback procedure is tested** - You can revert to the previous version quickly
+4. **Communication channels are set** - Where incidents are reported and coordinated
+5. **Postmortem template is ready** - How learnings are captured after resolution
 
 ### Step 6: Validate Observability
 Verify the system works by intentionally testing:
@@ -113,7 +113,7 @@ Verify the system works by intentionally testing:
 ## Guardrails
 - Never deploy a service without a health check endpoint
 - Logs must not contain PII, credentials, or authentication tokens
-- Alerts without runbooks are incomplete — fix the alert or write the runbook
+- Alerts without runbooks are incomplete - fix the alert or write the runbook
 - Dashboard access must be available to anyone who might respond to an incident
 - Monitoring infrastructure must itself be monitored (meta-monitoring)
 
@@ -134,7 +134,7 @@ Verify the system works by intentionally testing:
 | Shortcut | Why It Fails |
 |----------|-------------|
 | "We'll add monitoring after launch" | You can't debug what you can't see; first production issues hit blind |
-| Alerting on every metric | Alert fatigue — the team ignores alerts, including real ones |
+| Alerting on every metric | Alert fatigue - the team ignores alerts, including real ones |
 | Unstructured log output | Impossible to search, filter, or correlate across requests |
 | Dashboards only the author understands | Useless during incidents when someone else is responding |
 | No runbooks for alerts | On-call responders waste time figuring out what to do |

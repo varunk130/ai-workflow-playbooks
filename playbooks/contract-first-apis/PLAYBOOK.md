@@ -58,7 +58,7 @@ All errors follow the same shape:
 ```
 
 Rules:
-- Error codes are stable machine-readable identifiers — never change them
+- Error codes are stable machine-readable identifiers - never change them
 - Error messages are human-readable and safe to display
 - Details provide field-level context when applicable
 - Never expose stack traces, internal paths, or SQL in error responses
@@ -89,7 +89,7 @@ For each endpoint, write tests that verify:
 
 ## Guardrails
 - Never implement an endpoint before its contract is documented
-- Do not return different error shapes from different endpoints — consistency is mandatory
+- Do not return different error shapes from different endpoints - consistency is mandatory
 - Internal implementation errors must not leak through the API surface
 - Pagination is required for any endpoint that can return unbounded lists
 - All timestamps use ISO 8601 format in UTC

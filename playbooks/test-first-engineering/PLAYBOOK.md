@@ -6,7 +6,7 @@ trigger: Use when building or modifying features that deliver user value. Activa
 # Test-First Engineering
 
 ## Objective
-Write tests before implementation so that every feature is proven to work by an automated check that existed before the code did. Tests are not afterthoughts bolted on for coverage metrics — they are the specification expressed in executable form. If a feature has value, it must have a test that proves that value.
+Write tests before implementation so that every feature is proven to work by an automated check that existed before the code did. Tests are not afterthoughts bolted on for coverage metrics - they are the specification expressed in executable form. If a feature has value, it must have a test that proves that value.
 
 ## Triggers
 - About to implement a new feature, endpoint, component, or utility
@@ -27,7 +27,7 @@ Before writing any test or implementation:
 1. Read the requirement, acceptance criteria, or bug report
 2. Express the desired behavior as one or more plain-language assertions:
    - "Given [context], when [action], then [outcome]"
-3. Identify the **public contract** being tested — inputs, outputs, side effects
+3. Identify the **public contract** being tested - inputs, outputs, side effects
 4. Determine the test size category (see Test Sizing below)
 
 Do not write a test until you can state what it proves in one sentence.
@@ -58,7 +58,7 @@ Rules for this step:
 
 ### Step 3: Write the Minimum Implementation (Green)
 Write the smallest amount of production code that makes the failing test pass:
-1. Implement only what the test demands — nothing speculative
+1. Implement only what the test demands - nothing speculative
 2. Hard-code return values if that satisfies the test (the next test will force generalization)
 3. Run the full test suite, not just the new test
 4. If any existing test breaks, fix the regression before proceeding
@@ -83,15 +83,15 @@ With all tests passing, improve the code:
 2. Improve naming and readability
 3. Extract helper functions or modules if complexity warrants it
 4. Remove duplication in test code (shared fixtures, helper builders)
-5. Run all tests after each refactoring move — stay green
+5. Run all tests after each refactoring move - stay green
 
 Refactoring rules:
 - Do not add new behavior during refactoring (no new tests should be needed)
-- Do not change the public contract — only internals
+- Do not change the public contract - only internals
 - If you discover a missing behavior, stop refactoring and return to Step 2
 
 ### Step 5: Repeat the Cycle
-Return to Step 2 for the next behavior. Each cycle should take **5-15 minutes**. If a cycle exceeds 30 minutes, the behavior is too large — decompose it.
+Return to Step 2 for the next behavior. Each cycle should take **5-15 minutes**. If a cycle exceeds 30 minutes, the behavior is too large - decompose it.
 
 Progress rhythm:
 ```
@@ -169,7 +169,7 @@ Write a unit test when:
 - Never skip a failing test to "come back later." A skipped test is a lie about system behavior
 - Never write a test that depends on the execution order of other tests
 - Never share mutable state between test cases. Each test sets up its own world and tears it down
-- If a test is flaky (passes sometimes, fails sometimes), treat it as a P0 bug — fix or delete immediately
+- If a test is flaky (passes sometimes, fails sometimes), treat it as a P0 bug - fix or delete immediately
 - Do not optimize for code coverage percentage. Optimize for **behavior coverage**: every documented requirement has a corresponding test
 - A test that never fails provides no information. If you cannot imagine a code change that would make the test fail, the test is trivial and should be removed
 - Do not test framework or library internals. Test your code's interaction with them at the boundary

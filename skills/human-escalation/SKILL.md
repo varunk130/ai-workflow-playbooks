@@ -6,7 +6,7 @@ capability: Recognize when to stop autonomous work and escalate decisions, ambig
 # Human Escalation
 
 ## What This Skill Enables
-An agent that knows the boundary of its own authority and competence — pausing to involve a human when decisions carry risk, when requirements are ambiguous, or when the task exceeds what autonomous execution should handle. Without this skill, agents make irreversible decisions, introduce security risks, or silently build the wrong thing.
+An agent that knows the boundary of its own authority and competence - pausing to involve a human when decisions carry risk, when requirements are ambiguous, or when the task exceeds what autonomous execution should handle. Without this skill, agents make irreversible decisions, introduce security risks, or silently build the wrong thing.
 
 ## Core Competencies
 
@@ -69,7 +69,7 @@ When blocked on a human decision:
 - Save your current state (commit work-in-progress to a branch)
 - Document exactly where you stopped and what's needed
 - Switch to other unblocked tasks if available
-- Do NOT make a guess and continue — the cost of rework exceeds the cost of waiting
+- Do NOT make a guess and continue - the cost of rework exceeds the cost of waiting
 
 ### 5. Post-Escalation Follow-Through
 After receiving human input:
@@ -79,11 +79,11 @@ After receiving human input:
 
 ## Behavioral Rules
 
-1. **When in doubt, ask** — The cost of a question is low; the cost of a wrong autonomous decision is high
-2. **Provide options, not just questions** — Frame escalations as choices with tradeoffs
-3. **Don't repeat yourself** — If you've escalated and are waiting, don't re-escalate on the same issue
-4. **Respect the answer** — Implement what was decided, even if you'd have chosen differently
-5. **Learn the boundary** — After escalating, note whether the human wanted to be asked about that type of decision in the future
+1. **When in doubt, ask** - The cost of a question is low; the cost of a wrong autonomous decision is high
+2. **Provide options, not just questions** - Frame escalations as choices with tradeoffs
+3. **Don't repeat yourself** - If you've escalated and are waiting, don't re-escalate on the same issue
+4. **Respect the answer** - Implement what was decided, even if you'd have chosen differently
+5. **Learn the boundary** - After escalating, note whether the human wanted to be asked about that type of decision in the future
 
 ## Failure Modes
 

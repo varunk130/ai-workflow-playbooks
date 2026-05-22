@@ -22,10 +22,10 @@ Build frontend interfaces that are accessible, maintainable, and performant by d
 
 ### Step 1: Audit the Existing System
 Before creating new components:
-1. Inventory existing components — what already exists?
+1. Inventory existing components - what already exists?
 2. Check for a design system or component library in use
 3. Identify patterns: how is state managed? What styling approach is used?
-4. Note the accessibility baseline — are ARIA roles present? Is keyboard navigation supported?
+4. Note the accessibility baseline - are ARIA roles present? Is keyboard navigation supported?
 
 ### Step 2: Design the Component Architecture
 For each new UI element:
@@ -48,15 +48,15 @@ Principles:
 ### Step 3: Implement with Accessibility First
 Build the semantic structure before styling:
 
-1. **Write semantic HTML** — Use `<button>`, `<nav>`, `<main>`, `<article>` before reaching for `<div>`
-2. **Add keyboard support** — Every interactive element must be reachable via Tab and activatable via Enter/Space
-3. **Include ARIA attributes** — Labels, roles, live regions where semantic HTML isn't sufficient
-4. **Handle focus management** — Modals trap focus; route changes move focus to new content
-5. **Test without a mouse** — Navigate the entire flow using only the keyboard
+1. **Write semantic HTML** - Use `<button>`, `<nav>`, `<main>`, `<article>` before reaching for `<div>`
+2. **Add keyboard support** - Every interactive element must be reachable via Tab and activatable via Enter/Space
+3. **Include ARIA attributes** - Labels, roles, live regions where semantic HTML isn't sufficient
+4. **Handle focus management** - Modals trap focus; route changes move focus to new content
+5. **Test without a mouse** - Navigate the entire flow using only the keyboard
 
 ### Step 4: Apply Styling Systematically
 Follow the project's established pattern (CSS modules, Tailwind, styled-components, etc.):
-- Use design tokens for colors, spacing, typography — never hardcode values
+- Use design tokens for colors, spacing, typography - never hardcode values
 - Responsive layouts use relative units and container queries or media queries
 - Dark mode and theme support through CSS custom properties or theme context
 - Animations respect `prefers-reduced-motion`
@@ -73,8 +73,8 @@ State management decisions by scope:
 | Server-derived | Server state library (React Query, SWR, etc.) |
 
 Rules:
-- Derive computed values — don't store what you can calculate
-- URL state is state too — use query params for shareable UI state
+- Derive computed values - don't store what you can calculate
+- URL state is state too - use query params for shareable UI state
 - Form state belongs to the form library, not your global store
 
 ### Step 6: Write Component Tests
@@ -92,11 +92,11 @@ For each component:
 - Check loading states, error states, and empty states
 
 ## Guardrails
-- Never use `div` with an `onClick` handler — use `button` or `a` with proper roles
+- Never use `div` with an `onClick` handler - use `button` or `a` with proper roles
 - Do not disable the browser's default focus indicators without providing custom ones
 - Images must have `alt` text. Decorative images use `alt=""`
 - Color must not be the only means of conveying information
-- Do not suppress TypeScript errors in component props — fix the type contract
+- Do not suppress TypeScript errors in component props - fix the type contract
 
 ## Exit Criteria
 - [ ] Components follow single-responsibility principle

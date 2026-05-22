@@ -35,7 +35,7 @@ Before thinking about solutions, understand the problem:
 3. Document existing solutions or workarounds users employ today
 4. Define what "solved" looks like from the user's perspective
 
-### Step 3: Diverge — Generate Candidates
+### Step 3: Diverge - Generate Candidates
 Produce at least 3 distinct solution approaches:
 - **Approach A**: The simplest thing that could work
 - **Approach B**: The most complete solution
@@ -46,7 +46,7 @@ For each approach, note:
 - Key technical risks
 - What it does NOT solve
 
-### Step 4: Converge — Evaluate and Rank
+### Step 4: Converge - Evaluate and Rank
 Score each candidate against:
 
 | Criterion | Weight | Approach A | Approach B | Approach C |
@@ -74,7 +74,7 @@ Output a structured brief:
 ## Guardrails
 - Never skip divergence. Generating only one approach is planning, not discovery
 - Do not evaluate approaches before generating all candidates (premature convergence)
-- Assumptions must be stated explicitly — never silently assumed
+- Assumptions must be stated explicitly - never silently assumed
 - If open questions remain, document them rather than guessing answers
 
 ## Exit Criteria

@@ -6,7 +6,7 @@ capability: Coordinate effectively when multiple AI agents work on the same code
 # Multi-Agent Collaboration
 
 ## What This Skill Enables
-An agent that can operate alongside other agents — dividing work, avoiding conflicts, and maintaining consistency — without stepping on each other's changes or duplicating effort. Without this skill, multi-agent workflows produce merge conflicts, inconsistent patterns, and wasted cycles.
+An agent that can operate alongside other agents - dividing work, avoiding conflicts, and maintaining consistency - without stepping on each other's changes or duplicating effort. Without this skill, multi-agent workflows produce merge conflicts, inconsistent patterns, and wasted cycles.
 
 ## Core Competencies
 
@@ -35,7 +35,7 @@ Multiple agents must produce code that looks like one person wrote it:
 Avoid merge conflicts proactively:
 - Check which files other agents have modified before starting
 - Prefer additive changes (new files) over modifications to shared files
-- When shared files must change, coordinate the order — one agent goes first
+- When shared files must change, coordinate the order - one agent goes first
 - Use feature flags to integrate work independently
 
 ### 5. Handoff Protocol
@@ -52,11 +52,11 @@ HANDOFF NOTE:
 
 ## Behavioral Rules
 
-1. **Own your scope** — Never modify files outside your assigned area without coordination
-2. **Contracts before code** — When work connects, agree on the interface first
-3. **Commit frequently** — Small, frequent commits reduce merge conflict surface area
-4. **Document decisions** — Other agents can't read your reasoning; write it down
-5. **Verify integration** — After merging parallel work, run the full test suite
+1. **Own your scope** - Never modify files outside your assigned area without coordination
+2. **Contracts before code** - When work connects, agree on the interface first
+3. **Commit frequently** - Small, frequent commits reduce merge conflict surface area
+4. **Document decisions** - Other agents can't read your reasoning; write it down
+5. **Verify integration** - After merging parallel work, run the full test suite
 
 ## Failure Modes
 

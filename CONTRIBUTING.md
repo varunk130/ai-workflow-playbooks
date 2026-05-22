@@ -6,10 +6,10 @@ Thanks for helping improve these playbooks! This guide covers quality standards,
 
 Every playbook must be:
 
-- **Executable** — Step-by-step workflows the agent follows, not reference articles
-- **Verifiable** — Clear exit criteria with observable evidence (test output, build logs, metrics)
-- **Grounded** — Based on real engineering practices, not theoretical ideals
-- **Focused** — Only the content necessary to guide the agent through the workflow
+- **Executable** - Step-by-step workflows the agent follows, not reference articles
+- **Verifiable** - Clear exit criteria with observable evidence (test output, build logs, metrics)
+- **Grounded** - Based on real engineering practices, not theoretical ideals
+- **Focused** - Only the content necessary to guide the agent through the workflow
 
 ## Playbook Structure
 
@@ -65,10 +65,10 @@ Boundaries and constraints the agent must respect.
 
 ## Anti-Patterns in Contributions
 
-- **Don't duplicate** — Reference other playbooks instead of repeating their content
-- **Don't generalize** — "Write good tests" is not a step. "Run `npm test` and verify zero failures" is
-- **Don't bloat** — If a supporting file would be under 50 lines, inline it
-- **Don't skip anti-patterns** — Every playbook needs its "common shortcuts" table
+- **Don't duplicate** - Reference other playbooks instead of repeating their content
+- **Don't generalize** - "Write good tests" is not a step. "Run `npm test` and verify zero failures" is
+- **Don't bloat** - If a supporting file would be under 50 lines, inline it
+- **Don't skip anti-patterns** - Every playbook needs its "common shortcuts" table
 
 ## Pull Request Process
 

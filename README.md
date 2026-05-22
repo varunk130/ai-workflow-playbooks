@@ -17,9 +17,9 @@
 
 ---
 
-AI agents are powerful — but without structured guardrails, they cut corners: skipping specifications, ignoring edge cases, bypassing security reviews, and shipping untested code. These playbooks encode the operational discipline of seasoned engineering teams into repeatable, verifiable workflows that any AI agent can follow consistently.
+AI agents are powerful - but without structured guardrails, they cut corners: skipping specifications, ignoring edge cases, bypassing security reviews, and shipping untested code. These playbooks encode the operational discipline of seasoned engineering teams into repeatable, verifiable workflows that any AI agent can follow consistently.
 
-## ⚡ TL;DR — Get Started in 60 Seconds
+## ⚡ TL;DR - Get Started in 60 Seconds
 
 ```bash
 git clone https://github.com/varunk130/ai-workflow-playbooks.git
@@ -35,14 +35,14 @@ claude --plugin-dir /path/to/ai-workflow-playbooks
 When AI agents work without guardrails:
 
 - Requirements get assumed, not documented
-- Tests are an afterthought — or absent entirely
+- Tests are an afterthought - or absent entirely
 - Security surfaces go unexamined
 - Code ships without review, monitoring, or rollback plans
 - Technical debt compounds silently
 
 ## The Solution
 
-This repository provides **21 production playbooks**, **10 agent skills**, **4 specialist guardians**, and **5 operational runbooks** organized across a **7-stage delivery pipeline**. Each playbook is a structured, executable workflow — not a reference document. Agents follow steps, produce artifacts, and meet exit criteria before proceeding.
+This repository provides **21 production playbooks**, **10 agent skills**, **4 specialist guardians**, and **5 operational runbooks** organized across a **7-stage delivery pipeline**. Each playbook is a structured, executable workflow - not a reference document. Agents follow steps, produce artifacts, and meet exit criteria before proceeding.
 
 ## The Pipeline
 
@@ -61,7 +61,7 @@ flowchart LR
     class D,E gate
 ```
 
-> 🛡 Stages **HARDEN** and **VALIDATE** are gating reviews — a guardian must sign off before the agent proceeds.
+> 🛡 Stages **HARDEN** and **VALIDATE** are gating reviews - a guardian must sign off before the agent proceeds.
 
 ### Stage 1: DISCOVER
 Define and refine what you're building.
@@ -129,9 +129,9 @@ Monitor, learn, and improve after deployment.
 
 | Playbook | Purpose |
 |----------|---------|
-| [Meta — How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) | The onboarding playbook: pick the right playbook for the task and stage you're in |
+| [Meta - How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) | The onboarding playbook: pick the right playbook for the task and stage you're in |
 
-> ℹ️ **New here? Start with the [Meta — How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) playbook** — it's the entry point that routes you to the right stage.
+> ℹ️ **New here? Start with the [Meta - How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) playbook** - it's the entry point that routes you to the right stage.
 
 ## Agent Skills
 
@@ -211,19 +211,19 @@ Operational checklists loaded on demand:
 
 If you're new, start with these:
 
-0. **[Meta — How To Use](playbooks/meta-how-to-use/PLAYBOOK.md)** — Routes you to the right playbook for what you're doing
-1. **Specification Authoring** — Forces clear requirements before code
-2. **Test-First Engineering** — Ensures correctness through tests
-3. **Peer Review Protocol** — Catches issues before merge
+0. **[Meta - How To Use](playbooks/meta-how-to-use/PLAYBOOK.md)** - Routes you to the right playbook for what you're doing
+1. **Specification Authoring** - Forces clear requirements before code
+2. **Test-First Engineering** - Ensures correctness through tests
+3. **Peer Review Protocol** - Catches issues before merge
 
 ## Design Principles
 
-1. **Workflows, not wikis** — Each playbook is a step-by-step process, not a knowledge article
-2. **Guardrails over guidelines** — Exit criteria must be met with evidence, not promises
-3. **Anti-pattern inoculation** — Every playbook documents common shortcuts and why they fail
-4. **Progressive loading** — Core playbook stays focused; runbooks load only when needed
-5. **Agent-agnostic** — Plain Markdown works with any AI agent or IDE
-6. **Production-first** — The pipeline extends through deployment into operations
+1. **Workflows, not wikis** - Each playbook is a step-by-step process, not a knowledge article
+2. **Guardrails over guidelines** - Exit criteria must be met with evidence, not promises
+3. **Anti-pattern inoculation** - Every playbook documents common shortcuts and why they fail
+4. **Progressive loading** - Core playbook stays focused; runbooks load only when needed
+5. **Agent-agnostic** - Plain Markdown works with any AI agent or IDE
+6. **Production-first** - The pipeline extends through deployment into operations
 
 ## Contributing
 
@@ -231,8 +231,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on writing new playbooks o
 
 ## License
 
-MIT — see [LICENSE](LICENSE) for details.
+MIT - see [LICENSE](LICENSE) for details.
 
 ---
 
-<sub>Built by [Varun Kulkarni](https://github.com/varunk130) — part of a portfolio of AI agent systems for product teams.</sub>
+<sub>Built by [Varun Kulkarni](https://github.com/varunk130) - part of a portfolio of AI agent systems for product teams.</sub>

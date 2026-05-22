@@ -1,7 +1,7 @@
 Run the RELEASE stage of the AI Workflow Playbooks pipeline.
 
 Load and execute:
-1. `playbooks/release-orchestration/PLAYBOOK.md` — Staged rollout with pre-launch checklist and go/no-go gates
+1. `playbooks/release-orchestration/PLAYBOOK.md` - Staged rollout with pre-launch checklist and go/no-go gates
 
 Follow the pre-launch checklist:
 - All tests pass

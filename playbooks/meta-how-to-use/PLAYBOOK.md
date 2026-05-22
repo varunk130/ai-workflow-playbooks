@@ -53,9 +53,9 @@ DISCOVER → ARCHITECT → CONSTRUCT → HARDEN → VALIDATE → RELEASE → OPE
 
 ### Minimal Set (Start Here)
 For most tasks, these three playbooks cover the critical gaps:
-1. **Specification Authoring** — Prevents building the wrong thing
-2. **Test-First Engineering** — Prevents shipping broken things
-3. **Peer Review Protocol** — Catches what you missed
+1. **Specification Authoring** - Prevents building the wrong thing
+2. **Test-First Engineering** - Prevents shipping broken things
+3. **Peer Review Protocol** - Catches what you missed
 
 ### Full Pipeline
 For production features, load the complete pipeline stage by stage as you progress.
@@ -81,11 +81,11 @@ If using Claude Code with the plugin installed:
 
 ## Principles
 
-1. **Follow the workflow steps** — Playbooks are processes, not reference docs. Execute them in order.
-2. **Meet exit criteria** — Don't proceed to the next stage until exit criteria are satisfied with evidence.
-3. **Document deviations** — If you skip a step, note why. "Not applicable" is valid; silence is not.
-4. **Load progressively** — Start with what you need; add playbooks as the task demands.
-5. **Guardians are reviewers** — They provide a specialist perspective on your work, not an additional workflow.
+1. **Follow the workflow steps** - Playbooks are processes, not reference docs. Execute them in order.
+2. **Meet exit criteria** - Don't proceed to the next stage until exit criteria are satisfied with evidence.
+3. **Document deviations** - If you skip a step, note why. "Not applicable" is valid; silence is not.
+4. **Load progressively** - Start with what you need; add playbooks as the task demands.
+5. **Guardians are reviewers** - They provide a specialist perspective on your work, not an additional workflow.
 
 ## Anti-Patterns
 

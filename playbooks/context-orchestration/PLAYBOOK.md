@@ -9,10 +9,10 @@ trigger: When setting up, tuning, or debugging the information flow between your
 
 Feed the AI agent the **right context, at the right time, in the right amount** so that its
 output is accurate, relevant, and grounded in your actual codebase. Context quality is the
-single largest lever you have over agent output quality — a perfectly prompted agent with
+single largest lever you have over agent output quality - a perfectly prompted agent with
 poor context will consistently underperform a simply prompted agent with excellent context.
 
-## Triggers — Use This Playbook When
+## Triggers - Use This Playbook When
 
 - You are onboarding a new AI coding agent to an existing repository.
 - Agent responses are generic, hallucinated, or ignore project conventions.
@@ -24,7 +24,7 @@ poor context will consistently underperform a simply prompted agent with excelle
 ## Do Not Use When
 
 - The problem is a malformed prompt, not missing context (see the Prompt Engineering playbook).
-- You need to restrict agent capabilities for safety — that is an access-control concern, not context.
+- You need to restrict agent capabilities for safety - that is an access-control concern, not context.
 - The agent already produces correct output; adding more context adds cost with no benefit.
 
 ## Workflow
@@ -53,7 +53,7 @@ Organize context into three tiers and keep each one focused:
 
 **Project-wide context** should include: tech stack, directory structure conventions, naming
 standards, test expectations, forbidden patterns, and links to canonical docs. Keep it under
-80 lines — agents lose signal in long preambles.
+80 lines - agents lose signal in long preambles.
 
 **Task-specific context** should include: the exact files being modified, relevant type
 definitions or interfaces, the failing test or error message, and the acceptance criteria.
@@ -128,7 +128,7 @@ minimum context needed to close it.
 - **Cap project-wide rules** at roughly 80 lines. If you need more, split into scoped, directory-level files.
 - **Review context costs**: monitor token usage before and after changes. A 2x increase in input tokens should produce a measurable improvement in output quality.
 - **Do not rely on session memory for critical decisions**. If a decision matters, write it into a persistent file.
-- **Test rules files in CI** if your tooling supports it — a malformed rules file silently degrades every interaction.
+- **Test rules files in CI** if your tooling supports it - a malformed rules file silently degrades every interaction.
 
 ## Exit Criteria
 
@@ -143,10 +143,10 @@ minimum context needed to close it.
 
 | Anti-Pattern | Why It Fails | Fix |
 |---|---|---|
-| **Context overload** — dumping entire repo into the context window | Drowns the signal in noise; agent loses focus and misses key details | Include only the files and sections relevant to the current task |
-| **Stale context** — relying on a file the agent read 20 turns ago that has since changed | Agent generates code against an outdated version of the file | Re-read files after modifications or long gaps between references |
-| **Assuming context persists** — expecting the agent to remember a prior session | Most agents start fresh each session; prior decisions are lost | Write important decisions into rules files or persistent docs |
-| **Monolithic rules file** — a 300-line rules file covering every edge case | Agent attention dilutes across too many instructions; contradictions creep in | Split into project-wide (global) and directory-scoped (local) files |
-| **No context at all** — relying on the agent's training data for project specifics | Agent invents plausible but wrong conventions, dependencies, or file paths | Provide explicit rules and load relevant files into context |
-| **Verbose error pasting** — copying 500 lines of stack trace when 10 lines suffice | Wastes tokens and buries the actual error | Trim to the relevant frames and the root-cause message |
-| **MCP without validation** — connecting an MCP server and assuming it works | Silent failures mean the agent falls back to guessing | Test each MCP tool with a targeted question after setup |
+| **Context overload** - dumping entire repo into the context window | Drowns the signal in noise; agent loses focus and misses key details | Include only the files and sections relevant to the current task |
+| **Stale context** - relying on a file the agent read 20 turns ago that has since changed | Agent generates code against an outdated version of the file | Re-read files after modifications or long gaps between references |
+| **Assuming context persists** - expecting the agent to remember a prior session | Most agents start fresh each session; prior decisions are lost | Write important decisions into rules files or persistent docs |
+| **Monolithic rules file** - a 300-line rules file covering every edge case | Agent attention dilutes across too many instructions; contradictions creep in | Split into project-wide (global) and directory-scoped (local) files |
+| **No context at all** - relying on the agent's training data for project specifics | Agent invents plausible but wrong conventions, dependencies, or file paths | Provide explicit rules and load relevant files into context |
+| **Verbose error pasting** - copying 500 lines of stack trace when 10 lines suffice | Wastes tokens and buries the actual error | Trim to the relevant frames and the root-cause message |
+| **MCP without validation** - connecting an MCP server and assuming it works | Silent failures mean the agent falls back to guessing | Test each MCP tool with a targeted question after setup |

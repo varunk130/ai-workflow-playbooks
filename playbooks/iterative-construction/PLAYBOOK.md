@@ -25,7 +25,7 @@ From the implementation sequence:
 Before writing feature code:
 1. Ensure the current codebase builds and passes all tests: `npm test` (or equivalent)
 2. Create a checkpoint (commit or branch) so you can revert cleanly
-3. Read the relevant existing code — understand what you're changing
+3. Read the relevant existing code - understand what you're changing
 
 ### Step 3: Implement in Micro-Increments
 Follow this inner loop for each task:
@@ -68,7 +68,7 @@ Run acceptance criteria from the task definition:
 - Do not implement tasks out of dependency order unless you've verified no coupling exists
 - If a task grows beyond its estimated size, stop and re-decompose rather than pushing through
 - Feature flags are required for user-visible changes that aren't yet complete
-- Refactoring is a separate task — do not refactor while implementing features
+- Refactoring is a separate task - do not refactor while implementing features
 
 ## Exit Criteria
 - [ ] Each implemented task passes its acceptance criteria

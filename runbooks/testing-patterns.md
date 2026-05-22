@@ -117,7 +117,7 @@ test('submit button is disabled when form is invalid', () => {
 ```
 
 Principles:
-- Query by role, label, or text — never by test ID unless no semantic alternative exists
+- Query by role, label, or text - never by test ID unless no semantic alternative exists
 - Simulate user interactions (click, type) rather than calling component methods
 - Assert on visible output, not internal state
 

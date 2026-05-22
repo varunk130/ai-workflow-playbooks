@@ -150,7 +150,7 @@ Skills are **persistent competency profiles** that define how AI agents behave a
 | [Incremental Verification](skills/incremental-verification/SKILL.md) | Verify work at every step, not just at the end |
 | [Production Awareness](skills/production-awareness/SKILL.md) | Think about production consequences while writing code |
 
-## Quick Start
+## ⚡ Quick Start
 
 ### With Claude Code (Recommended)
 

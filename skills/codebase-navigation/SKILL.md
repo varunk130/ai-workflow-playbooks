@@ -6,7 +6,7 @@ capability: Efficiently explore, map, and understand unfamiliar codebases before
 # Codebase Navigation
 
 ## What This Skill Enables
-An agent that can quickly orient itself in any codebase — finding the right files, understanding the architecture, and identifying conventions — before writing a single line of code. Agents without this skill guess at file locations, miss existing utilities, and create duplicates.
+An agent that can quickly orient itself in any codebase - finding the right files, understanding the architecture, and identifying conventions - before writing a single line of code. Agents without this skill guess at file locations, miss existing utilities, and create duplicates.
 
 ## Core Competencies
 
@@ -14,12 +14,12 @@ An agent that can quickly orient itself in any codebase — finding the right fi
 Before touching code, build a mental map:
 - Read `README.md`, `CONTRIBUTING.md`, and any project-level config files
 - Identify the package manager and build system (`package.json`, `pyproject.toml`, `Cargo.toml`, `go.mod`)
-- Map the directory structure — where does source live? Tests? Config? Docs?
+- Map the directory structure - where does source live? Tests? Config? Docs?
 - Identify the entry point(s) of the application
 
 ### 2. Convention Detection
 Infer the project's conventions from existing code:
-- **Naming**: camelCase vs snake_case vs kebab-case — match what exists
+- **Naming**: camelCase vs snake_case vs kebab-case - match what exists
 - **File organization**: feature-based vs layer-based vs hybrid
 - **Import style**: relative vs absolute, barrel files, path aliases
 - **Testing conventions**: co-located tests vs separate `__tests__` directory, naming patterns
@@ -54,11 +54,11 @@ Identify common architectural patterns:
 
 ## Behavioral Rules
 
-1. **Read before writing** — Never create a file without first searching for an existing one that does the same thing
-2. **Match conventions** — New code should be indistinguishable from existing code in style
-3. **Minimize exploration scope** — Start narrow (the specific module), widen only when needed
-4. **Document what you find** — If the architecture isn't documented, note your findings for context
-5. **Respect boundaries** — If the project separates concerns into layers, don't bypass them
+1. **Read before writing** - Never create a file without first searching for an existing one that does the same thing
+2. **Match conventions** - New code should be indistinguishable from existing code in style
+3. **Minimize exploration scope** - Start narrow (the specific module), widen only when needed
+4. **Document what you find** - If the architecture isn't documented, note your findings for context
+5. **Respect boundaries** - If the project separates concerns into layers, don't bypass them
 
 ## Failure Modes
 

@@ -15,9 +15,9 @@ Operational procedures for handling production incidents. Load this when an inci
 
 ### Phase 1: Detection & Triage (First 5 Minutes)
 
-1. **Confirm the incident** — Verify the alert or report is real, not a false positive
-2. **Assess severity** — Use the severity table above
-3. **Declare the incident** — Post in the incident channel with:
+1. **Confirm the incident** - Verify the alert or report is real, not a false positive
+2. **Assess severity** - Use the severity table above
+3. **Declare the incident** - Post in the incident channel with:
    ```
    INCIDENT: [Brief description]
    SEVERITY: [SEV-1/2/3/4]
@@ -26,17 +26,17 @@ Operational procedures for handling production incidents. Load this when an inci
    STATUS: Investigating
    ```
 4. **Assign roles**:
-   - **Incident Commander** — Coordinates response, owns communication
-   - **Technical Lead** — Investigates root cause and implements fix
-   - **Communications Lead** — Updates stakeholders and status page
+   - **Incident Commander** - Coordinates response, owns communication
+   - **Technical Lead** - Investigates root cause and implements fix
+   - **Communications Lead** - Updates stakeholders and status page
 
 ### Phase 2: Investigation (Minutes 5-30)
 
-1. **Check recent changes** — Was anything deployed in the last hour?
-2. **Review dashboards** — Error rates, latency, resource utilization
-3. **Check dependencies** — Are downstream services healthy?
-4. **Search logs** — Filter by error level and time window around incident start
-5. **Correlate** — Match the incident timeline with deployment, config changes, or traffic spikes
+1. **Check recent changes** - Was anything deployed in the last hour?
+2. **Review dashboards** - Error rates, latency, resource utilization
+3. **Check dependencies** - Are downstream services healthy?
+4. **Search logs** - Filter by error level and time window around incident start
+5. **Correlate** - Match the incident timeline with deployment, config changes, or traffic spikes
 
 ### Phase 3: Mitigation (As Soon As Root Cause is Identified)
 
@@ -52,9 +52,9 @@ Choose the fastest path to restore service:
 
 ### Phase 4: Resolution
 
-1. **Verify mitigation** — Confirm metrics return to normal baselines
-2. **Monitor for recurrence** — Watch for 30 minutes after mitigation
-3. **Update status** — Post resolution to incident channel and status page:
+1. **Verify mitigation** - Confirm metrics return to normal baselines
+2. **Monitor for recurrence** - Watch for 30 minutes after mitigation
+3. **Update status** - Post resolution to incident channel and status page:
    ```
    INCIDENT RESOLVED: [Brief description]
    ROOT CAUSE: [One-sentence summary]
@@ -62,7 +62,7 @@ Choose the fastest path to restore service:
    DURATION: [Total incident duration]
    FOLLOW-UP: Postmortem scheduled for [date]
    ```
-4. **Stand down** — Release the incident team
+4. **Stand down** - Release the incident team
 
 ### Phase 5: Postmortem (Within 48 Hours)
 

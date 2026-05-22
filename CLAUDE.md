@@ -1,16 +1,16 @@
-# AI Workflow Playbooks — Project Context
+# AI Workflow Playbooks - Project Context
 
 This repository contains structured engineering playbooks designed for AI coding agents. Each playbook guides agents through a specific phase of the software delivery pipeline with executable workflows, exit criteria, and anti-pattern guards.
 
 ## Repository Layout
 
-- `playbooks/` — 21 operational playbooks organized by pipeline stage
-- `skills/` — 10 agent skills loaded on demand to augment the playbooks
-- `guardians/` — 4 specialist review personas (architecture, quality, security, operations)
-- `runbooks/` — 5 cross-cutting operational checklists
-- `lifecycle/` — Pipeline stage documentation and hooks
-- `docs/` — Platform-specific setup guides
-- `.claude/commands/` — 7 pipeline slash commands
+- `playbooks/` - 21 operational playbooks organized by pipeline stage
+- `skills/` - 10 agent skills loaded on demand to augment the playbooks
+- `guardians/` - 4 specialist review personas (architecture, quality, security, operations)
+- `runbooks/` - 5 cross-cutting operational checklists
+- `lifecycle/` - Pipeline stage documentation and hooks
+- `docs/` - Platform-specific setup guides
+- `.claude/commands/` - 7 pipeline slash commands
 
 ## Pipeline Stages
 

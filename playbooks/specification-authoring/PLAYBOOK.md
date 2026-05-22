@@ -86,14 +86,14 @@ List anything unresolved. Each item should include:
 
 ### Step 5: Review the Spec
 Before considering the spec complete:
-1. Read every functional requirement — can you write a test for it?
-2. Read every boundary — is there ambiguity about what's in or out?
+1. Read every functional requirement - can you write a test for it?
+2. Read every boundary - is there ambiguity about what's in or out?
 3. Check for contradictions between requirements
 4. Verify all error states are covered
 
 ## Guardrails
 - Never start implementation with an incomplete spec. If sections are missing, document them as TODOs with owners
-- Specifications are living documents — update them when requirements change during implementation
+- Specifications are living documents - update them when requirements change during implementation
 - Avoid implementation details in the spec. Describe WHAT, not HOW
 - Every requirement must be testable. If you can't write a test for it, it's not specific enough
 

@@ -45,7 +45,7 @@ SIZE: [S/M/L — aim for S or M]
 Rules for task sizing:
 - **Small (S)**: Implementable in a single focused session, ~50-100 lines changed
 - **Medium (M)**: May touch 2-3 files, ~100-300 lines changed
-- **Large (L)**: Must be decomposed further — L tasks are plans, not tasks
+- **Large (L)**: Must be decomposed further - L tasks are plans, not tasks
 
 ### Step 3: Establish Dependency Order
 Arrange tasks in implementation order:
@@ -59,7 +59,7 @@ For each task, explicitly state:
 - **Enables**: Which tasks can start after this one
 
 ### Step 4: Identify the Critical Path
-Mark the longest chain of dependent tasks. This is your critical path — delays here delay everything. Consider:
+Mark the longest chain of dependent tasks. This is your critical path - delays here delay everything. Consider:
 - Can any critical-path tasks be simplified to reduce risk?
 - Are there parallel tracks that can proceed independently?
 - Where are the highest-risk tasks? Schedule them early
@@ -88,12 +88,12 @@ Output the final ordered task list:
 ## Guardrails
 - Every task must be independently testable. If a task can only be verified by running the full system, decompose further
 - No task should modify more than 5 files. Larger changes indicate insufficient decomposition
-- Dependencies must be explicit — no hidden coupling between tasks
+- Dependencies must be explicit - no hidden coupling between tasks
 - If a task description starts with "and also," it's two tasks
 
 ## Exit Criteria
 - [ ] Every spec requirement maps to at least one task
-- [ ] No task is sized Large — all are Small or Medium
+- [ ] No task is sized Large - all are Small or Medium
 - [ ] Dependencies are explicitly documented
 - [ ] Critical path is identified
 - [ ] Each task has clear acceptance criteria

@@ -6,7 +6,7 @@ capability: Transform vague user inputs into structured, actionable requirements
 # Requirement Extraction
 
 ## What This Skill Enables
-An agent that can take ambiguous human input — "make the dashboard faster," "add authentication," "fix the search" — and systematically convert it into concrete, testable requirements before writing code. Agents without this skill build the wrong thing confidently.
+An agent that can take ambiguous human input - "make the dashboard faster," "add authentication," "fix the search" - and systematically convert it into concrete, testable requirements before writing code. Agents without this skill build the wrong thing confidently.
 
 ## Core Competencies
 
@@ -81,11 +81,11 @@ OUT OF SCOPE (for this iteration):
 
 ## Behavioral Rules
 
-1. **Never assume silently** — If you fill in a gap, say so and ask for confirmation
-2. **Ask before building** — One clarifying question saves hours of rework
-3. **Separate problem from solution** — "We need Redis" is a solution; "responses are slow" is the problem
-4. **Quantify wherever possible** — "Fast" means nothing; "<200ms p95 response time" is testable
-5. **Default conservatively** — When in doubt, choose the simpler interpretation and note it as an assumption
+1. **Never assume silently** - If you fill in a gap, say so and ask for confirmation
+2. **Ask before building** - One clarifying question saves hours of rework
+3. **Separate problem from solution** - "We need Redis" is a solution; "responses are slow" is the problem
+4. **Quantify wherever possible** - "Fast" means nothing; "<200ms p95 response time" is testable
+5. **Default conservatively** - When in doubt, choose the simpler interpretation and note it as an assumption
 
 ## Failure Modes
 

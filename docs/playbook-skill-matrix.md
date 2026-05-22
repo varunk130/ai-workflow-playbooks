@@ -14,14 +14,14 @@ Which agent skills the most common playbooks rely on. Skills are persistent agen
 | Threat Mitigation | HARDEN | production-awareness | dependency-assessment |
 | Throughput Tuning | HARDEN | production-awareness | error-interpretation |
 | Runtime Diagnostics | VALIDATE | error-interpretation | production-awareness |
-| Fault Isolation & Recovery | VALIDATE | error-interpretation, incremental-verification | — |
+| Fault Isolation & Recovery | VALIDATE | error-interpretation, incremental-verification | - |
 | Peer Review Protocol | VALIDATE | codebase-navigation | human-escalation |
-| Complexity Reduction | VALIDATE | safe-refactoring, incremental-verification | — |
-| Version Control Discipline | RELEASE | incremental-verification | — |
-| Pipeline Automation | RELEASE | production-awareness | — |
-| Release Orchestration | RELEASE | production-awareness, human-escalation | — |
-| Knowledge Capture | RELEASE | requirement-extraction | — |
+| Complexity Reduction | VALIDATE | safe-refactoring, incremental-verification | - |
+| Version Control Discipline | RELEASE | incremental-verification | - |
+| Pipeline Automation | RELEASE | production-awareness | - |
+| Release Orchestration | RELEASE | production-awareness, human-escalation | - |
+| Knowledge Capture | RELEASE | requirement-extraction | - |
 | Observability & Ops | OPERATE | production-awareness, error-interpretation | human-escalation |
-| Meta — How To Use | (cross) | — | all |
+| Meta - How To Use | (cross) | - | all |
 
 **Use this matrix to:** (1) load the right skills into an agent's profile before kicking off a stage, or (2) audit whether a missing skill is why a playbook keeps stalling.

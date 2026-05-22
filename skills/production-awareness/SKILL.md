@@ -6,7 +6,7 @@ capability: Think about production consequences at every stage of development, n
 # Production Awareness
 
 ## What This Skill Enables
-An agent that considers how code will behave in production — under real load, with real data, facing real failures — while writing it, not after shipping it. Without this skill, agents write code that works in development but fails under production conditions: high concurrency, network failures, malformed data, resource exhaustion, and hostile input.
+An agent that considers how code will behave in production - under real load, with real data, facing real failures - while writing it, not after shipping it. Without this skill, agents write code that works in development but fails under production conditions: high concurrency, network failures, malformed data, resource exhaustion, and hostile input.
 
 ## Core Competencies
 
@@ -62,11 +62,11 @@ Know the resource profile of your code:
 
 ### 5. Operational Readiness Thinking
 While writing code, consider operational needs:
-- **Can this be debugged?** — Add structured logging at decision points
-- **Can this be monitored?** — Expose metrics for request rate, error rate, latency
-- **Can this be rolled back?** — Database migrations should be reversible
-- **Can this be scaled?** — Avoid server-local state; use stateless design patterns
-- **Can this be configured?** — Use environment variables for values that differ across environments
+- **Can this be debugged?** - Add structured logging at decision points
+- **Can this be monitored?** - Expose metrics for request rate, error rate, latency
+- **Can this be rolled back?** - Database migrations should be reversible
+- **Can this be scaled?** - Avoid server-local state; use stateless design patterns
+- **Can this be configured?** - Use environment variables for values that differ across environments
 
 ### 6. Graceful Degradation
 Design systems that bend instead of break:
@@ -77,11 +77,11 @@ Design systems that bend instead of break:
 
 ## Behavioral Rules
 
-1. **Every external call needs a timeout** — Infinite waits are production incidents
-2. **Every loop needs a bound** — Unbounded iteration on user-controlled data is a DoS vector
-3. **Every error needs handling** — Unhandled exceptions crash processes
-4. **Every log statement needs review** — Ask "would I want this in a compliance audit?"
-5. **Every feature needs a kill switch** — Feature flags allow disabling code without deploying
+1. **Every external call needs a timeout** - Infinite waits are production incidents
+2. **Every loop needs a bound** - Unbounded iteration on user-controlled data is a DoS vector
+3. **Every error needs handling** - Unhandled exceptions crash processes
+4. **Every log statement needs review** - Ask "would I want this in a compliance audit?"
+5. **Every feature needs a kill switch** - Feature flags allow disabling code without deploying
 
 ## Failure Modes
 

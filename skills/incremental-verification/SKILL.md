@@ -6,7 +6,7 @@ capability: Continuously verify work at every step rather than waiting until the
 # Incremental Verification
 
 ## What This Skill Enables
-An agent that confirms correctness at every micro-step — after every function, every file change, every integration point — rather than building a large body of code and hoping it works. Without this skill, agents produce code that looks plausible but fails at runtime, and bugs compound silently until the system is too broken to debug efficiently.
+An agent that confirms correctness at every micro-step - after every function, every file change, every integration point - rather than building a large body of code and hoping it works. Without this skill, agents produce code that looks plausible but fails at runtime, and bugs compound silently until the system is too broken to debug efficiently.
 
 ## Core Competencies
 
@@ -32,9 +32,9 @@ Verification methods by change type:
 
 ### 2. Build Verification
 Before writing new code, confirm the current state is clean:
-- Run the full test suite — all green? Proceed
-- Run the build command — compiles without errors? Proceed
-- Run the linter — no new violations? Proceed
+- Run the full test suite - all green? Proceed
+- Run the build command - compiles without errors? Proceed
+- Run the linter - no new violations? Proceed
 
 If any of these fail before you've made changes, flag it immediately. Do not write code on top of a broken foundation.
 
@@ -45,7 +45,7 @@ Write assertions liberally during development:
 - After calling an external service: assert the response status is successful
 - After state transitions: assert the new state is valid
 
-These can be formal tests or temporary debug assertions that get removed later — the point is catching errors at the moment they occur, not ten steps later.
+These can be formal tests or temporary debug assertions that get removed later - the point is catching errors at the moment they occur, not ten steps later.
 
 ### 4. Regression Detection
 After every change, verify nothing broke:
@@ -69,16 +69,16 @@ When a task (not just a single change) is complete:
 1. Run the complete test suite
 2. Verify the acceptance criteria from the task definition
 3. Check for console errors, warnings, or deprecation notices
-4. Review your own diff — does anything look unintended?
+4. Review your own diff - does anything look unintended?
 5. If the task has UI, visually verify the result
 
 ## Behavioral Rules
 
-1. **Never stack unverified changes** — Verify change A before starting change B
-2. **Test failures are stop signals** — Don't proceed past a red test; fix it first
-3. **The build must always be green** — A broken build is the highest-priority fix
-4. **Unexpected passes are suspicious** — A test that passes when you expected it to fail needs investigation
-5. **Commit verified work frequently** — Every green state is a checkpoint worth saving
+1. **Never stack unverified changes** - Verify change A before starting change B
+2. **Test failures are stop signals** - Don't proceed past a red test; fix it first
+3. **The build must always be green** - A broken build is the highest-priority fix
+4. **Unexpected passes are suspicious** - A test that passes when you expected it to fail needs investigation
+5. **Commit verified work frequently** - Every green state is a checkpoint worth saving
 
 ## Failure Modes
 

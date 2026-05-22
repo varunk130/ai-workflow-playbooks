@@ -10,7 +10,7 @@ Reference checklist for WCAG 2.1 AA compliance. Load this when building or audit
 - [ ] Custom focus styles meet 3:1 contrast ratio against adjacent colors
 - [ ] Escape key closes modals, dropdowns, and popups
 - [ ] Arrow keys navigate within composite widgets (tabs, menus, radio groups)
-- [ ] No keyboard traps — user can always Tab away from any element
+- [ ] No keyboard traps - user can always Tab away from any element
 - [ ] Skip navigation link available for repetitive content
 
 ## Focus Management

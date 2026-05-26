@@ -166,7 +166,7 @@ Then use pipeline commands:
 /architect  → Plan the system and decompose tasks
 /construct  → Build incrementally with tests
 /harden     → Run security and performance checks
-/validate   → Review code quality
+/validate   → Diagnose, debug, and review code before shipping
 /release    → Ship with confidence
 /operate    → Set up monitoring and observability
 ```

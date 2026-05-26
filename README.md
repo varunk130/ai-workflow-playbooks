@@ -28,7 +28,7 @@ claude --plugin-dir /path/to/ai-workflow-playbooks
 #   /discover  /architect  /construct  /harden  /validate  /release  /operate
 ```
 
-> Full setup, Cursor/Copilot/Gemini integration, and per-stage details: see [⚡ Quick Start](#-quick-start) below.
+> Full setup, Cursor/Copilot/Gemini/Windsurf integration, and per-stage details: see [⚡ Quick Start](#-quick-start) below.
 
 ## The Problem
 

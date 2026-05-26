@@ -229,6 +229,8 @@ If you're new, start with these:
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on writing new playbooks or improving existing ones.
 
+---
+
 ## Related work
 
 Part of a portfolio of AI agent and skill libraries for product, GTM, and decision-making teams.

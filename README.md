@@ -211,10 +211,10 @@ Operational checklists loaded on demand:
 
 If you're new, start with these:
 
-0. **[Meta - How To Use](playbooks/meta-how-to-use/PLAYBOOK.md)** - Routes you to the right playbook for what you're doing
-1. **Specification Authoring** - Forces clear requirements before code
-2. **Test-First Engineering** - Ensures correctness through tests
-3. **Peer Review Protocol** - Catches issues before merge
+1. **[Meta - How To Use](playbooks/meta-how-to-use/PLAYBOOK.md)** - Routes you to the right playbook for what you're doing
+2. **Specification Authoring** - Forces clear requirements before code
+3. **Test-First Engineering** - Ensures correctness through tests
+4. **Peer Review Protocol** - Catches issues before merge
 
 ## Design Principles
 

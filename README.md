@@ -273,4 +273,4 @@ MIT — see [LICENSE](LICENSE) for details.
 
 ---
 
-<sub>Built by [Varun Kulkarni](https://github.com/varunk130) - part of a portfolio of AI agent systems for product teams.</sub>
+<sub>Built by [Varun Kulkarni](https://github.com/varunk130) — part of a portfolio of AI agent systems for product teams.</sub>

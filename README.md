@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/hero.svg" alt="AI Workflow Playbooks — 21 playbooks, 10 skills, 4 guardians, 5 runbooks across the 7-stage delivery pipeline" width="100%"/>
+
 # 🛠 AI Workflow Playbooks
 
 ### Production-grade operational playbooks for AI coding agents across the full software delivery pipeline

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-label="AI Workflow Playbooks. 21 playbooks, 10 skills, 4 guardians, 5 runbooks across the 7-stage delivery pipeline.">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1733"/>
+      <stop offset="50%" style="stop-color:#0e2a4a"/>
+      <stop offset="100%" style="stop-color:#0a1733"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5eb1ff"/>
+      <stop offset="100%" style="stop-color:#1a73e8"/>
+    </linearGradient>
+    <linearGradient id="gate" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffb259"/>
+      <stop offset="100%" style="stop-color:#ea8600"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="380" fill="url(#bg)" rx="12"/>
+
+  <g opacity="0.05" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="76" x2="1200" y2="76"/>
+    <line x1="0" y1="190" x2="1200" y2="190"/>
+    <line x1="0" y1="304" x2="1200" y2="304"/>
+  </g>
+
+  <ellipse cx="200" cy="190" rx="240" ry="140" fill="#1a73e8" opacity="0.10"/>
+  <ellipse cx="1000" cy="190" rx="240" ry="140" fill="#ea8600" opacity="0.06"/>
+
+  <rect x="80" y="42" width="80" height="3" rx="1.5" fill="url(#accent)"/>
+
+  <!-- Logo glyph: stylized pipeline -->
+  <g transform="translate(80, 62)">
+    <rect width="56" height="56" rx="12" fill="#1a73e8" opacity="0.15"/>
+    <circle cx="14" cy="28" r="5" fill="#5eb1ff"/>
+    <circle cx="28" cy="28" r="5" fill="#5eb1ff"/>
+    <circle cx="42" cy="28" r="5" fill="#5eb1ff"/>
+    <line x1="14" y1="28" x2="42" y2="28" stroke="#5eb1ff" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <text x="156" y="100" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="46" font-weight="800" fill="#ffffff" letter-spacing="-1">AI Workflow Playbooks</text>
+
+  <text x="156" y="135" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#bcd2f4">Production-grade operational playbooks for AI coding agents across the full software delivery pipeline.</text>
+
+  <rect x="80" y="170" width="1040" height="1" fill="#ffffff" opacity="0.12"/>
+
+  <!-- Pipeline stages -->
+  <g transform="translate(80, 200)" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="0.6" text-anchor="middle">
+    <g transform="translate(60, 0)">
+      <rect x="-55" y="0" width="110" height="46" rx="8" fill="#1a73e8" opacity="0.95"/>
+      <text y="20" fill="#ffffff">DISCOVER</text>
+      <text y="36" fill="#cfe2ff" font-weight="500" font-size="10">2 playbooks</text>
+    </g>
+    <g transform="translate(190, 0)">
+      <rect x="-55" y="0" width="110" height="46" rx="8" fill="#1a73e8" opacity="0.95"/>
+      <text y="20" fill="#ffffff">ARCHITECT</text>
+      <text y="36" fill="#cfe2ff" font-weight="500" font-size="10">1 playbook</text>
+    </g>
+    <g transform="translate(320, 0)">
+      <rect x="-55" y="0" width="110" height="46" rx="8" fill="#1a73e8" opacity="0.95"/>
+      <text y="20" fill="#ffffff">CONSTRUCT</text>
+      <text y="36" fill="#cfe2ff" font-weight="500" font-size="10">5 playbooks</text>
+    </g>
+    <g transform="translate(450, 0)">
+      <rect x="-55" y="0" width="110" height="46" rx="8" fill="url(#gate)"/>
+      <text y="20" fill="#ffffff">HARDEN</text>
+      <text y="36" fill="#fff0d6" font-weight="500" font-size="10">gate · 2 playbooks</text>
+    </g>
+    <g transform="translate(580, 0)">
+      <rect x="-55" y="0" width="110" height="46" rx="8" fill="url(#gate)"/>
+      <text y="20" fill="#ffffff">VALIDATE</text>
+      <text y="36" fill="#fff0d6" font-weight="500" font-size="10">gate · 4 playbooks</text>
+    </g>
+    <g transform="translate(710, 0)">
+      <rect x="-55" y="0" width="110" height="46" rx="8" fill="#1a73e8" opacity="0.95"/>
+      <text y="20" fill="#ffffff">RELEASE</text>
+      <text y="36" fill="#cfe2ff" font-weight="500" font-size="10">5 playbooks</text>
+    </g>
+    <g transform="translate(840, 0)">
+      <rect x="-55" y="0" width="110" height="46" rx="8" fill="#1a73e8" opacity="0.95"/>
+      <text y="20" fill="#ffffff">OPERATE</text>
+      <text y="36" fill="#cfe2ff" font-weight="500" font-size="10">1 playbook</text>
+    </g>
+  </g>
+
+  <!-- Stats row -->
+  <g transform="translate(80, 290)" font-family="-apple-system, sans-serif">
+    <g>
+      <text font-size="36" font-weight="800" fill="#5eb1ff">21</text>
+      <text x="0" y="22" font-size="11" font-weight="600" fill="#bcd2f4" letter-spacing="1.5">PLAYBOOKS</text>
+    </g>
+    <g transform="translate(150, 0)">
+      <text font-size="36" font-weight="800" fill="#5eb1ff">10</text>
+      <text x="0" y="22" font-size="11" font-weight="600" fill="#bcd2f4" letter-spacing="1.5">AGENT SKILLS</text>
+    </g>
+    <g transform="translate(310, 0)">
+      <text font-size="36" font-weight="800" fill="#ffb259">4</text>
+      <text x="0" y="22" font-size="11" font-weight="600" fill="#f4d9ad" letter-spacing="1.5">GUARDIANS</text>
+    </g>
+    <g transform="translate(440, 0)">
+      <text font-size="36" font-weight="800" fill="#ffb259">5</text>
+      <text x="0" y="22" font-size="11" font-weight="600" fill="#f4d9ad" letter-spacing="1.5">RUNBOOKS</text>
+    </g>
+    <g transform="translate(570, 0)">
+      <text font-size="36" font-weight="800" fill="#ffffff">7</text>
+      <text x="0" y="22" font-size="11" font-weight="600" fill="#dde4f5" letter-spacing="1.5">PIPELINE STAGES</text>
+    </g>
+  </g>
+</svg>

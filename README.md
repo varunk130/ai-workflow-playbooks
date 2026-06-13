@@ -19,7 +19,7 @@
 
 ---
 
-AI agents are powerful - but without structured guardrails, they cut corners: skipping specifications, ignoring edge cases, bypassing security reviews, and shipping untested code. These playbooks encode the operational discipline of seasoned engineering teams into repeatable, verifiable workflows that any AI agent can follow consistently.
+AI agents are powerful — but without structured guardrails, they cut corners: skipping specifications, ignoring edge cases, bypassing security reviews, and shipping untested code. These playbooks encode the operational discipline of seasoned engineering teams into repeatable, verifiable workflows that any AI agent can follow consistently.
 
 ## ⚡ TL;DR - Get Started in 60 Seconds
 
@@ -37,14 +37,14 @@ claude --plugin-dir /path/to/ai-workflow-playbooks
 When AI agents work without guardrails:
 
 - Requirements get assumed, not documented
-- Tests are an afterthought - or absent entirely
+- Tests are an afterthought — or absent entirely
 - Security surfaces go unexamined
 - Code ships without review, monitoring, or rollback plans
 - Technical debt compounds silently
 
 ## The Solution
 
-This repository provides **21 production playbooks**, **10 agent skills**, **4 specialist guardians**, and **5 operational runbooks** organized across a **7-stage delivery pipeline**. Each playbook is a structured, executable workflow - not a reference document. Agents follow steps, produce artifacts, and meet exit criteria before proceeding.
+This repository provides **21 production playbooks**, **10 agent skills**, **4 specialist guardians**, and **5 operational runbooks** organized across a **7-stage delivery pipeline**. Each playbook is a structured, executable workflow — not a reference document. Agents follow steps, produce artifacts, and meet exit criteria before proceeding.
 
 ## The Pipeline
 
@@ -63,7 +63,7 @@ flowchart LR
     class D,E gate
 ```
 
-> 🛡 Stages **HARDEN** and **VALIDATE** are gating reviews - a guardian must sign off before the agent proceeds.
+> 🛡 Stages **HARDEN** and **VALIDATE** are gating reviews — a guardian must sign off before the agent proceeds.
 
 ### Stage 1: DISCOVER
 Define and refine what you're building.

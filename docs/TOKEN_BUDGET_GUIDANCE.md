@@ -51,7 +51,7 @@ The annotations live alongside the stage definition so a contributor changing th
 
 ## The Three Cost-Reduction Levers (per stage)
 
-When a stage's cost is over-budget, attack the levers in this order - they correspond to the impact ranking in the table above.
+When a stage's cost is over-budget, attack the levers in this order — they correspond to the impact ranking in the table above.
 
 ### Lever 1 - Cut Context (highest impact, lowest risk)
 
@@ -83,7 +83,7 @@ Reasoning models often spend disproportionate output tokens on internal delibera
 
 - Constrain output schema (JSON with a maximum field count)
 - Set explicit `max_tokens` limits per stage
-- Provide examples that *demonstrate* terse output - the model imitates the example length
+- Provide examples that *demonstrate* terse output — the model imitates the example length
 
 ---
 
@@ -142,4 +142,4 @@ To adopt this guidance:
 3. List 1-3 cost-reduction levers per stage (use Lever 1/2/3 above as a starting menu)
 4. Optionally: ship a `pricing.json` with the playbook so per-run cost estimates are computable
 
-Stages without a budget card aren't broken - they just don't have a defensible answer to *"what does this cost per use?"* The card makes that answer explicit and improvable.
+Stages without a budget card aren't broken — they just don't have a defensible answer to *"what does this cost per use?"* The card makes that answer explicit and improvable.

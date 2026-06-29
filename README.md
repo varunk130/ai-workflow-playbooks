@@ -267,7 +267,7 @@ Part of a portfolio of AI agent and skill libraries for product, GTM, and decisi
 
 **Evaluation & operations**
 
-- [AI-Eval-Skills](https://github.com/varunk130/AI-Eval-Skills) - 6 skills to plan, generate, run, interpret, and triage AI agent evaluations
+- [AI-Eval-Skills](https://github.com/varunk130/AI-Eval-Skills) - 7 skills to plan, generate, run, interpret, and triage AI agent evaluations
 
 ---
 

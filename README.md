@@ -19,6 +19,32 @@
 
 ---
 
+## Table of Contents
+
+- [TL;DR - Get Started in 60 Seconds](#-tldr---get-started-in-60-seconds)
+- [The Problem](#the-problem)
+- [The Solution](#the-solution)
+- [The Pipeline](#the-pipeline)
+  - [Stage 1: DISCOVER](#stage-1-discover)
+  - [Stage 2: ARCHITECT](#stage-2-architect)
+  - [Stage 3: CONSTRUCT](#stage-3-construct)
+  - [Stage 4: HARDEN](#stage-4-harden)
+  - [Stage 5: VALIDATE](#stage-5-validate)
+  - [Stage 6: RELEASE](#stage-6-release)
+  - [Stage 7: OPERATE](#stage-7-operate)
+  - [Cross-Cutting: Meta](#cross-cutting-meta)
+- [Agent Skills](#agent-skills)
+- [Quick Start](#-quick-start)
+- [Guardians](#guardians)
+- [Runbooks](#runbooks)
+- [Recommended Starting Set](#recommended-starting-set)
+- [Design Principles](#design-principles)
+- [Contributing](#contributing)
+- [Related Work](#related-work)
+- [License](#license)
+
+---
+
 AI agents are powerful — but without structured guardrails, they cut corners: skipping specifications, ignoring edge cases, bypassing security reviews, and shipping untested code. These playbooks encode the operational discipline of seasoned engineering teams into repeatable, verifiable workflows that any AI agent can follow consistently.
 
 ## ⚡ TL;DR - Get Started in 60 Seconds

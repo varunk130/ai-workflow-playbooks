@@ -2,6 +2,7 @@
 
 Notable changes to this project, newest first.
 
+- 2026-06-28 - Documentation: added the three Next.js multi-agent demos (Compound, Beacon, Atlas) to the Related Work section.
 - 2026-06-16 - Documentation: updated the ai-customer-discovery-skills status in Related Work (5 of 12 skills shipped).
 - 2026-05-07 - Documentation: surfaced the 7-stage pipeline mnemonic in the project context for quicker agent onboarding.
 - 2026-05-02 - Documentation polish: tightened README phrasing and clarified install steps.

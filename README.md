@@ -21,7 +21,7 @@
 
 ## Table of Contents
 
-- [TL;DR - Get Started in 60 Seconds](#-tldr---get-started-in-60-seconds)
+- [TL;DR — Get Started in 60 Seconds](#-tldr---get-started-in-60-seconds)
 - [The Problem](#the-problem)
 - [The Solution](#the-solution)
 - [The Pipeline](#the-pipeline)
@@ -47,7 +47,7 @@
 
 AI agents are powerful — but without structured guardrails, they cut corners: skipping specifications, ignoring edge cases, bypassing security reviews, and shipping untested code. These playbooks encode the operational discipline of seasoned engineering teams into repeatable, verifiable workflows that any AI agent can follow consistently.
 
-## ⚡ TL;DR - Get Started in 60 Seconds
+## ⚡ TL;DR — Get Started in 60 Seconds
 
 ```bash
 git clone https://github.com/varunk130/ai-workflow-playbooks.git
@@ -157,9 +157,9 @@ Monitor, learn, and improve after deployment.
 
 | Playbook | Purpose |
 |----------|---------|
-| [Meta - How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) | The onboarding playbook: pick the right playbook for the task and stage you're in |
+| [Meta — How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) | The onboarding playbook: pick the right playbook for the task and stage you're in |
 
-> ℹ️ **New here? Start with the [Meta - How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) playbook** - it's the entry point that routes you to the right stage.
+> ℹ️ **New here? Start with the [Meta — How To Use](playbooks/meta-how-to-use/PLAYBOOK.md) playbook** — it's the entry point that routes you to the right stage.
 
 ## Agent Skills
 
@@ -239,19 +239,19 @@ Operational checklists loaded on demand:
 
 If you're new, start with these:
 
-1. **[Meta - How To Use](playbooks/meta-how-to-use/PLAYBOOK.md)** - Routes you to the right playbook for what you're doing
-2. **[Specification Authoring](playbooks/specification-authoring/PLAYBOOK.md)** - Forces clear requirements before code
-3. **[Test-First Engineering](playbooks/test-first-engineering/PLAYBOOK.md)** - Ensures correctness through tests
-4. **[Peer Review Protocol](playbooks/peer-review-protocol/PLAYBOOK.md)** - Catches issues before merge
+1. **[Meta — How To Use](playbooks/meta-how-to-use/PLAYBOOK.md)** — Routes you to the right playbook for what you're doing
+2. **[Specification Authoring](playbooks/specification-authoring/PLAYBOOK.md)** — Forces clear requirements before code
+3. **[Test-First Engineering](playbooks/test-first-engineering/PLAYBOOK.md)** — Ensures correctness through tests
+4. **[Peer Review Protocol](playbooks/peer-review-protocol/PLAYBOOK.md)** — Catches issues before merge
 
 ## Design Principles
 
-1. **Workflows, not wikis** - Each playbook is a step-by-step process, not a knowledge article
-2. **Guardrails over guidelines** - Exit criteria must be met with evidence, not promises
-3. **Anti-pattern inoculation** - Every playbook documents common shortcuts and why they fail
-4. **Progressive loading** - Core playbook stays focused; runbooks load only when needed
-5. **Agent-agnostic** - Plain Markdown works with any AI agent or IDE
-6. **Production-first** - The pipeline extends through deployment into operations
+1. **Workflows, not wikis** — Each playbook is a step-by-step process, not a knowledge article
+2. **Guardrails over guidelines** — Exit criteria must be met with evidence, not promises
+3. **Anti-pattern inoculation** — Every playbook documents common shortcuts and why they fail
+4. **Progressive loading** — Core playbook stays focused; runbooks load only when needed
+5. **Agent-agnostic** — Plain Markdown works with any AI agent or IDE
+6. **Production-first** — The pipeline extends through deployment into operations
 
 ## Contributing
 
@@ -265,35 +265,35 @@ Part of a portfolio of AI agent and skill libraries for product, GTM, and decisi
 
 **Discovery & research**
 
-- [ai-customer-discovery-skills](https://github.com/varunk130/ai-customer-discovery-skills) - Turn raw customer signal into validated product opportunities (5 of 12 shipped)
-- [jtbd-extractor](https://github.com/varunk130/ai-customer-discovery-skills/tree/main/skills/jtbd-extractor) - Extract Jobs-to-be-Done statements from research, with opportunity scoring
+- [ai-customer-discovery-skills](https://github.com/varunk130/ai-customer-discovery-skills) — Turn raw customer signal into validated product opportunities (5 of 12 shipped)
+- [jtbd-extractor](https://github.com/varunk130/ai-customer-discovery-skills/tree/main/skills/jtbd-extractor) — Extract Jobs-to-be-Done statements from research, with opportunity scoring
 
 **Strategy & decisions**
 
-- [claude-code-skills](https://github.com/varunk130/claude-code-skills) - 29 production-grade skills for finance, product, strategy, and game theory
-- [AI-Builder-Decision-Analyst](https://github.com/varunk130/AI-Builder-Decision-Analyst) - 11 skills that catch bad bets before you ship across DECIDE / BUILD / COMMUNICATE / LEARN
+- [claude-code-skills](https://github.com/varunk130/claude-code-skills) — 29 production-grade skills for finance, product, strategy, and game theory
+- [AI-Builder-Decision-Analyst](https://github.com/varunk130/AI-Builder-Decision-Analyst) — 11 skills that catch bad bets before you ship across DECIDE / BUILD / COMMUNICATE / LEARN
 
 **Go-to-market**
 
-- [ai-gtm-skill-library](https://github.com/varunk130/ai-gtm-skill-library) - 31 opinionated GTM skills across the full discover -> renew lifecycle
-- [ai-marketing-claude-skills](https://github.com/varunk130/ai-marketing-claude-skills) - 12 marketing-ops skills with scoring algorithms and statistical frameworks
-- [ai-partner-ecosystem-analysis](https://github.com/varunk130/ai-partner-ecosystem-analysis) - Deep research on any ISV, partner, or competitor with a 1-slide PPTX output
+- [ai-gtm-skill-library](https://github.com/varunk130/ai-gtm-skill-library) — 31 opinionated GTM skills across the full discover → renew lifecycle
+- [ai-marketing-claude-skills](https://github.com/varunk130/ai-marketing-claude-skills) — 12 marketing-ops skills with scoring algorithms and statistical frameworks
+- [ai-partner-ecosystem-analysis](https://github.com/varunk130/ai-partner-ecosystem-analysis) — Deep research on any ISV, partner, or competitor with a 1-slide PPTX output
 
 **UX & design**
 
-- [ai-ux-skill-library](https://github.com/varunk130/ai-ux-skill-library) - 12 frameworks for designing UX for AI products, agents, and AI-powered experiences
+- [ai-ux-skill-library](https://github.com/varunk130/ai-ux-skill-library) — 12 frameworks for designing UX for AI products, agents, and AI-powered experiences
 
 **Multi-agent demos**
 
-- [ai-pm-agents-suite](https://github.com/varunk130/ai-pm-agents-suite) - 6-agent pipeline plus 3 standalone PM agents (decision engine, financial analyst, stakeholder translator) that turn customer feedback into strategy, PRDs, and comms
-- [ai-legal-agents-skills-os](https://github.com/varunk130/ai-legal-agents-skills-os) - Agentic operating system for legal work: one master agent, nine specialist skills, MCP + MCP Apps
-- [ai-growth-os](https://github.com/varunk130/ai-growth-os) - Compound: a multi-agent growth experiment engine that runs the find -> design -> ship -> learn loop end-to-end, offline
-- [ai-customer-acquisition](https://github.com/varunk130/ai-customer-acquisition) - Beacon: five agents allocate a budget across channels, build the creative, and reallocate on week-1 results
-- [ai-revops](https://github.com/varunk130/ai-revops) - Atlas: nine agents across GTM, Partnerships, and RevOps take a company into a new market with one Vertical Launch Plan
+- [ai-pm-agents-suite](https://github.com/varunk130/ai-pm-agents-suite) — 6-agent pipeline plus 3 standalone PM agents (decision engine, financial analyst, stakeholder translator) that turn customer feedback into strategy, PRDs, and comms
+- [ai-legal-agents-skills-os](https://github.com/varunk130/ai-legal-agents-skills-os) — Agentic operating system for legal work: one master agent, nine specialist skills, MCP + MCP Apps
+- [ai-growth-os](https://github.com/varunk130/ai-growth-os) — Compound: a multi-agent growth experiment engine that runs the find → design → ship → learn loop end-to-end, offline
+- [ai-customer-acquisition](https://github.com/varunk130/ai-customer-acquisition) — Beacon: five agents allocate a budget across channels, build the creative, and reallocate on week-1 results
+- [ai-revops](https://github.com/varunk130/ai-revops) — Atlas: nine agents across GTM, Partnerships, and RevOps take a company into a new market with one Vertical Launch Plan
 
 **Evaluation & operations**
 
-- [AI-Eval-Skills](https://github.com/varunk130/AI-Eval-Skills) - 7 skills to plan, generate, run, interpret, and triage AI agent evaluations
+- [AI-Eval-Skills](https://github.com/varunk130/AI-Eval-Skills) — 7 skills to plan, generate, run, interpret, and triage AI agent evaluations
 
 ---
 

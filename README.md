@@ -4,7 +4,7 @@
 
 # 🛠 AI Workflow Playbooks
 
-### Production-grade operational playbooks for AI coding agents across the full software delivery pipeline
+### Production-grade playbooks for AI coding agents across the full software delivery pipeline
 
 [![Playbooks](https://img.shields.io/badge/Playbooks-21-blue?style=for-the-badge)](#the-pipeline)
 [![Skills](https://img.shields.io/badge/Skills-10-blueviolet?style=for-the-badge)](#agent-skills)

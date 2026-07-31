@@ -1,6 +1,6 @@
 ---
 name: production-awareness
-capability: Think about production consequences at every stage of development, not just at deployment time.
+description: Think about production consequences at every stage of development, not just at deployment time.
 ---
 
 # Production Awareness

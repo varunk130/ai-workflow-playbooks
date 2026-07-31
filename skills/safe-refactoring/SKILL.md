@@ -1,6 +1,6 @@
 ---
 name: safe-refactoring
-capability: Restructure code without changing behavior, verified by tests at every step.
+description: Restructure code without changing behavior, verified by tests at every step.
 ---
 
 # Safe Refactoring

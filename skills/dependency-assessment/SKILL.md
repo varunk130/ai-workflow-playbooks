@@ -1,6 +1,6 @@
 ---
 name: dependency-assessment
-capability: Evaluate whether to add, update, or remove a dependency based on maintenance, security, size, and licensing criteria.
+description: Evaluate whether to add, update, or remove a dependency based on maintenance, security, size, and licensing criteria.
 ---
 
 # Dependency Assessment

@@ -1,6 +1,6 @@
 ---
 name: context-window-management
-capability: Manage what information is loaded into the agent's context to maximize relevance and minimize noise.
+description: Manage what information is loaded into the agent's context to maximize relevance and minimize noise.
 ---
 
 # Context Window Management

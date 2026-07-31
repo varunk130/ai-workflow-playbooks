@@ -1,6 +1,6 @@
 ---
 name: error-interpretation
-capability: Read error messages, stack traces, and logs systematically rather than guessing at fixes.
+description: Read error messages, stack traces, and logs systematically rather than guessing at fixes.
 ---
 
 # Error Interpretation

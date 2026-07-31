@@ -1,6 +1,6 @@
 ---
 name: requirement-extraction
-capability: Transform vague user inputs into structured, actionable requirements with explicit assumptions.
+description: Transform vague user inputs into structured, actionable requirements with explicit assumptions.
 ---
 
 # Requirement Extraction

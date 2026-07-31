@@ -1,6 +1,6 @@
 ---
 name: multi-agent-collaboration
-capability: Coordinate effectively when multiple AI agents work on the same codebase or feature.
+description: Coordinate effectively when multiple AI agents work on the same codebase or feature.
 ---
 
 # Multi-Agent Collaboration

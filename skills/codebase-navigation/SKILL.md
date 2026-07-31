@@ -1,6 +1,6 @@
 ---
 name: codebase-navigation
-capability: Efficiently explore, map, and understand unfamiliar codebases before making changes.
+description: Efficiently explore, map, and understand unfamiliar codebases before making changes.
 ---
 
 # Codebase Navigation

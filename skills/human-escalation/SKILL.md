@@ -1,6 +1,6 @@
 ---
 name: human-escalation
-capability: Recognize when to stop autonomous work and escalate decisions, ambiguity, or risk to a human.
+description: Recognize when to stop autonomous work and escalate decisions, ambiguity, or risk to a human.
 ---
 
 # Human Escalation

@@ -1,6 +1,6 @@
 ---
 name: incremental-verification
-capability: Continuously verify work at every step rather than waiting until the end to test.
+description: Continuously verify work at every step rather than waiting until the end to test.
 ---
 
 # Incremental Verification

@@ -21,7 +21,7 @@
 
 ## Table of Contents
 
-- [TL;DR — Get Started in 60 Seconds](#-tldr---get-started-in-60-seconds)
+- [TL;DR — Get Started in 60 Seconds](#-tldr--get-started-in-60-seconds)
 - [The Problem](#the-problem)
 - [The Solution](#the-solution)
 - [The Pipeline](#the-pipeline)

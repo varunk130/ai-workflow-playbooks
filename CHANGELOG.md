@@ -2,6 +2,9 @@
 
 Notable changes to this project, newest first.
 
+- 2026-10-03 - Documentation: fixed the broken Table of Contents anchor for the TL;DR section.
+- 2026-10-03 - Documentation: corrected the ai-ux-skill-library reference in Related Work to 13 frameworks and the ai-gtm-skill-library reference to 37 skills.
+- 2026-10-03 - Maintenance: added .editorconfig and .gitattributes, and restored the missing final newline in CODE_OF_CONDUCT.md.
 - 2026-06-29 - Documentation: added a Table of Contents to the README for faster navigation of the pipeline, skills, guardians, and runbooks sections.
 - 2026-06-28 - Documentation: added the three Next.js multi-agent demos (Compound, Beacon, Atlas) to the Related Work section.
 - 2026-06-16 - Documentation: updated the ai-customer-discovery-skills status in Related Work (5 of 12 skills shipped).

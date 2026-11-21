@@ -257,6 +257,8 @@ If you're new, start with these:
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on writing new playbooks or improving existing ones.
 
+Please follow the [Code of Conduct](CODE_OF_CONDUCT.md). To report a vulnerability, see [SECURITY.md](SECURITY.md).
+
 ---
 
 ## Related Work

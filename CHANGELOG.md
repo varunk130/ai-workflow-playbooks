@@ -2,6 +2,7 @@
 
 Notable changes to this project, newest first.
 
+- 2026-11-21 - Maintenance: added CODEOWNERS, issue and pull request templates, and linked the code of conduct and security policy from the README.
 - 2026-10-03 - Documentation: fixed the broken Table of Contents anchor for the TL;DR section.
 - 2026-10-03 - Documentation: corrected the ai-ux-skill-library reference in Related Work to 13 frameworks and the ai-gtm-skill-library reference to 37 skills.
 - 2026-10-03 - Maintenance: added .editorconfig and .gitattributes, and restored the missing final newline in CODE_OF_CONDUCT.md.

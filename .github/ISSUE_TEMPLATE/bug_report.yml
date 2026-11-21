@@ -1,0 +1,28 @@
+name: Bug report
+description: A playbook gives wrong guidance, fails to trigger, or produces broken output.
+labels: [bug]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: Playbook name
+      placeholder: test-first-engineering
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: What you asked the agent
+      description: The prompt or slash command you used, and which agent (Claude Code, GitHub Copilot, Codex).
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What went wrong
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead

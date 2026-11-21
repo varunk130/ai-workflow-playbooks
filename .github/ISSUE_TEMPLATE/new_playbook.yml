@@ -1,0 +1,40 @@
+name: New playbook or skill proposal
+description: Propose a playbook, skill, guardian, or runbook for a gap in the delivery pipeline.
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - Playbook
+        - Skill
+        - Guardian
+        - Runbook
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Pipeline stage
+      options:
+        - DISCOVER
+        - ARCHITECT
+        - CONSTRUCT
+        - HARDEN
+        - VALIDATE
+        - RELEASE
+        - OPERATE
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What agents get wrong today
+      description: The corner AI coding agents cut without this guidance.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: How to verify it was followed
